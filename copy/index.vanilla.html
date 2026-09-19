@@ -1,0 +1,3477 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#4255ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Quizlet - Thinking, Crime & Change Vocabulary (87 Words)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+    :root {
+      --primary: #4255ff;
+      --primary-hover: #3142e6;
+      --primary-light: #edf0ff;
+      --primary-glow: rgba(66, 85, 255, 0.25);
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --text-main: #1a1d28;
+      --text-muted: #646f79;
+      --text-subtle: #939bb4;
+      --border: #e6e8ec;
+      --border-focus: #c5c9d6;
+      --card-shadow: 0 12px 32px -10px rgba(22, 28, 45, 0.08), 0 4px 14px -2px rgba(22, 28, 45, 0.04);
+      --card-shadow-hover: 0 20px 42px -10px rgba(66, 85, 255, 0.12), 0 6px 20px -3px rgba(22, 28, 45, 0.05);
+      --synonym-bg: #eafaf1;
+      --synonym-text: #0e8a4a;
+      --synonym-border: #c3eed6;
+      --accent-badge: #f0f3ff;
+      --success: #10b981;
+      --success-bg: #ecfdf5;
+      --danger: #ef4444;
+      --danger-bg: #fef2f2;
+      --warning: #f59e0b;
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --transition-flip: transform 0.55s cubic-bezier(0.34, 1.4, 0.64, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px 12px 36px 12px;
+      padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px));
+    }
+
+    /* Ambient background glow */
+    .ambient-glow {
+      position: fixed;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 760px;
+      max-width: 100vw;
+      height: 400px;
+      background: radial-gradient(circle, rgba(66, 85, 255, 0.08) 0%, rgba(246, 247, 251, 0) 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .app-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 820px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Header Banner */
+    .top-header {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      background: linear-gradient(135deg, #4255ff 0%, #2234d6 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 22px;
+      box-shadow: 0 4px 12px var(--primary-glow);
+    }
+
+    .brand-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .brand-details h1 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .brand-details p {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 2px;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .badge-count {
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 3px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    /* Mode Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      background: #e9ecf2;
+      padding: 4px;
+      border-radius: var(--radius-md);
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-tab {
+      flex: 1;
+      min-width: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      touch-action: manipulation;
+    }
+
+    .nav-tab svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .nav-tab:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-tab.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* =========================================
+       1. KARTOCHKALAR (FLASHCARDS)
+       ========================================= */
+    .flashcards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Top Sub-bar */
+    .card-subbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 0 2px;
+    }
+
+    .counter-display {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .counter-display span {
+      color: var(--text-subtle);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      touch-action: manipulation;
+    }
+
+    .pill-btn:active {
+      transform: scale(0.96);
+    }
+
+    .pill-btn:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Progress bar */
+    .progress-bar-container {
+      width: 100%;
+      height: 5px;
+      background: #e2e5ec;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #4255ff, #6475ff);
+      width: 0%;
+      border-radius: 999px;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 3D Card Scene */
+    .scene {
+      width: 100%;
+      height: 380px;
+      min-height: 300px;
+      perspective: 1200px;
+      user-select: none;
+      touch-action: pan-y;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: var(--transition-flip);
+      border-radius: var(--radius-xl);
+    }
+
+    .card.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card.swiping-left {
+      transform: translateX(-35px) rotate(-3deg);
+      opacity: 0.8;
+      transition: all 0.15s ease-out;
+    }
+
+    .card.swiping-right {
+      transform: translateX(35px) rotate(3deg);
+      opacity: 0.8;
+      transition: all 0.15s ease-out;
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 28px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      overflow: hidden;
+    }
+
+    .card:hover .card-face {
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .card-face-front {
+      z-index: 2;
+      transform: rotateY(0deg);
+    }
+
+    .card-face-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(180deg, #ffffff 0%, #f9faff 100%);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .card-badge {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 4px 9px;
+      border-radius: 6px;
+    }
+
+    .speech-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      touch-action: manipulation;
+    }
+
+    .speech-btn:active {
+      transform: scale(0.92);
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px 4px;
+      overflow-y: auto;
+      max-height: 100%;
+      scrollbar-width: thin;
+    }
+
+    .word-text {
+      font-size: clamp(24px, 6vw, 34px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      word-break: break-word;
+      padding: 0 4px;
+    }
+
+    .back-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      max-width: 95%;
+    }
+
+    .synonym-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--synonym-bg);
+      border: 1px solid var(--synonym-border);
+      color: var(--synonym-text);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      max-width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .synonym-title {
+      font-weight: 800;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .synonym-val {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .definition-text {
+      font-size: clamp(16px, 4vw, 20px);
+      line-height: 1.55;
+      font-weight: 600;
+      color: #1f2430;
+      word-break: break-word;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-subtle);
+      text-align: center;
+    }
+
+    /* Bottom Flashcard Controls */
+    .flashcard-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 4px;
+      width: 100%;
+    }
+
+    .btn {
+      font-family: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 18px;
+      border-radius: var(--radius-md);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      touch-action: manipulation;
+      user-select: none;
+    }
+
+    .btn:active {
+      transform: scale(0.96);
+    }
+
+    .btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .btn-nav {
+      background: var(--surface);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      flex: 1;
+    }
+
+    .btn-nav:hover:not(:disabled) {
+      background: #fdfdfe;
+      border-color: var(--border-focus);
+      color: var(--primary);
+    }
+
+    .btn-flip {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 14px var(--primary-glow);
+      flex: 1.3;
+    }
+
+    .btn-flip:hover {
+      background: var(--primary-hover);
+    }
+
+    .hints-text {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .kbd {
+      background: #e5e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      color: var(--text-main);
+      font-size: 11px;
+    }
+
+    /* =========================================
+       2. TEST / LEARN
+       ========================================= */
+    .learn-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 22px 20px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .quiz-score-badge {
+      display: flex;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+
+    .score-correct {
+      color: var(--success);
+      background: var(--success-bg);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .score-wrong {
+      color: var(--danger);
+      background: var(--danger-bg);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .quiz-question-box {
+      background: #f8f9fc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .quiz-def-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .quiz-question-text {
+      font-size: clamp(16px, 4vw, 20px);
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .quiz-opt-btn {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      touch-action: manipulation;
+      word-break: break-word;
+    }
+
+    .quiz-opt-btn:active {
+      transform: scale(0.98);
+    }
+
+    .quiz-opt-btn.correct {
+      border-color: var(--success) !important;
+      background: var(--success-bg) !important;
+      color: var(--success) !important;
+    }
+
+    .quiz-opt-btn.wrong {
+      border-color: var(--danger) !important;
+      background: var(--danger-bg) !important;
+      color: var(--danger) !important;
+    }
+
+    .quiz-feedback {
+      min-height: 24px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .quiz-feedback.success {
+      color: var(--success);
+    }
+
+    .quiz-feedback.error {
+      color: var(--danger);
+    }
+
+    .quiz-footer {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* =========================================
+       3. MATCH GAME
+       ========================================= */
+    .match-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .match-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .match-timer {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 6px 14px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .match-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      min-height: 360px;
+    }
+
+    .match-tile {
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 8px;
+      min-height: 85px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+      user-select: none;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+      touch-action: manipulation;
+      word-break: break-word;
+    }
+
+    .match-tile:active {
+      transform: scale(0.96);
+    }
+
+    .match-tile.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+      transform: scale(1.02);
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+
+    .match-tile.matched {
+      visibility: hidden;
+      opacity: 0;
+      transform: scale(0.8);
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .match-tile.error {
+      border-color: var(--danger);
+      background: var(--danger-bg);
+      color: var(--danger);
+      animation: shake 0.4s ease;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    .victory-box {
+      text-align: center;
+      padding: 30px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .victory-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--success);
+    }
+
+    /* =========================================
+       4. LUG‘AT (DICTIONARY)
+       ========================================= */
+    .dict-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f4f6fa;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: inherit;
+      font-size: 14.5px;
+      color: var(--text-main);
+      min-width: 0;
+    }
+
+    .dict-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 540px;
+      overflow-y: auto;
+      padding-right: 2px;
+      scrollbar-width: thin;
+    }
+
+    .dict-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .dict-item-content {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .dict-item-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dict-word {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-main);
+      word-break: break-word;
+    }
+
+    .dict-synonym {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--synonym-text);
+      background: var(--synonym-bg);
+      border: 1px solid var(--synonym-border);
+      padding: 2px 9px;
+      border-radius: 999px;
+      word-break: break-word;
+    }
+
+    .dict-definition {
+      font-size: 14px;
+      color: #374151;
+      font-weight: 500;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1e2433;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      z-index: 1000;
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* =========================================
+       MOBILE & RESPONSIVE BREAKPOINTS
+       ========================================= */
+    @media (max-width: 680px) {
+      body {
+        padding: 8px 8px 30px 8px;
+      }
+
+      .app-wrapper {
+        gap: 12px;
+      }
+
+      .top-header {
+        padding: 12px 14px;
+      }
+
+      .brand-logo {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 20px;
+      }
+
+      .brand-details h1 {
+        font-size: 16px;
+      }
+
+      .nav-tab {
+        padding: 9px 12px;
+        font-size: 13px;
+      }
+
+      .scene {
+        height: 330px;
+      }
+
+      .card-face {
+        padding: 18px 20px;
+      }
+
+      .flashcard-controls {
+        gap: 8px;
+      }
+
+      .btn {
+        padding: 12px 12px;
+        font-size: 13.5px;
+      }
+
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+
+      .match-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .match-tile {
+        min-height: 80px;
+        padding: 10px 8px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .scene {
+        height: 310px;
+      }
+
+      .card-face {
+        padding: 16px 16px;
+      }
+
+      .card-badge {
+        font-size: 10px;
+        padding: 3px 7px;
+      }
+
+      .speech-btn {
+        width: 34px;
+        height: 34px;
+      }
+
+      .flashcard-controls {
+        gap: 6px;
+      }
+
+      .btn {
+        padding: 11px 10px;
+        font-size: 13px;
+      }
+
+      .pill-btn {
+        padding: 6px 10px;
+        font-size: 11.5px;
+      }
+
+      .counter-display {
+        font-size: 15px;
+      }
+
+      .match-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .match-timer {
+        align-self: center;
+      }
+    }
+  
+    i[data-lucide] {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.125em;
+    }
+
+  
+    /* Header & Set Selector */
+    .header-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .top-utils {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .util-btn {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.2s;
+    }
+
+    .util-btn:hover, .util-btn.active {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .set-selector-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+
+    .set-select-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .custom-select-wrapper {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .set-select {
+      width: 100%;
+      padding: 9px 14px;
+      background: var(--surface-subtle);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .set-select:focus {
+      border-color: var(--primary);
+      background: var(--surface);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+
+    .set-action-btns {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-add-set {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-light);
+      border: 1.5px solid rgba(66, 85, 255, 0.3);
+      color: var(--primary);
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-add-set:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .btn-del-set {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--danger-bg);
+      border: 1px solid #fecaca;
+      color: var(--danger);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-del-set:hover {
+      background: var(--danger);
+      color: white;
+    }
+
+    /* Modal Overlay & Dialog */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+      padding: 16px;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 540px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      animation: modalPop 0.25s cubic-bezier(0.34, 1.4, 0.64, 1);
+    }
+
+    @keyframes modalPop {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-header h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-close-btn {
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      line-height: 1;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--danger);
+      background: var(--danger-bg);
+    }
+
+    .modal-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--surface-subtle);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--primary);
+      background: var(--surface);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+
+    .form-textarea {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12.5px;
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .file-upload-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      background: var(--primary-light);
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      border: 1px dashed rgba(66, 85, 255, 0.4);
+    }
+
+    .modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      padding: 14px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--surface-subtle);
+    }
+
+  
+    /* Dictionary Top Bar & Actions */
+    .dict-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .dict-top-bar .search-box {
+      flex: 1;
+      min-width: 240px;
+      margin-bottom: 0 !important;
+    }
+
+    .dict-action-btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+  
+    /* Flashcard Summary / Results Screen */
+    .flashcard-summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 38px 24px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+      animation: summaryFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes summaryFadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .summary-icon-circle {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(66, 85, 255, 0.16) 0%, rgba(16, 185, 129, 0.18) 100%);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 26px rgba(66, 85, 255, 0.16);
+    }
+
+    .summary-icon-circle svg, .summary-icon-circle i {
+      width: 40px;
+      height: 40px;
+      stroke-width: 2.2;
+    }
+
+    .summary-title {
+      font-size: 25px;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      margin-bottom: -8px;
+    }
+
+    .summary-subtitle {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      max-width: 460px;
+      line-height: 1.5;
+    }
+
+    .summary-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      width: 100%;
+      max-width: 520px;
+      margin: 10px 0;
+    }
+
+    @media (max-width: 480px) {
+      .summary-stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .summary-stat-box {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s;
+    }
+
+    .summary-stat-box .stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .summary-stat-box.starred .stat-number {
+      color: var(--warning);
+    }
+
+    .summary-stat-box.mastered .stat-number {
+      color: var(--success);
+    }
+
+    .summary-stat-box .stat-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .summary-action-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .summary-action-row {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .btn-finish {
+      background: linear-gradient(135deg, var(--primary) 0%, #10b981 100%) !important;
+      color: white !important;
+      border-color: transparent !important;
+      font-weight: 800 !important;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25) !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <div class="app-wrapper">
+    <!-- Top Header Banner -->
+    <header class="top-header">
+      <div class="header-top-row">
+        <div class="brand-section">
+          <div class="brand-logo">Q</div>
+          <div class="brand-details">
+            <h1 id="activeTopicTitle">Thinking, Change & Society <span class="badge-count" id="totalWordsBadge">87 Words</span></h1>
+            <p id="activeTopicSubtitle">Vocabulary, Synonyms & Uzbek Definitions</p>
+          </div>
+        </div>
+
+        <div class="top-utils">
+          <button class="util-btn" id="themeToggleBtn" title="Mavzu (Yorug'/Qorong'i)" aria-label="Mavzu almashtirish">
+            <i data-lucide="moon"></i>
+          </button>
+          <button class="util-btn active" id="soundFxToggleBtn" title="Ovoz effektlari" aria-label="Ovoz effektlari">
+            <i data-lucide="volume-2"></i>
+          </button>
+          <button class="util-btn" id="fullscreenBtn" title="Butun ekran" aria-label="Butun ekran">
+            <i data-lucide="maximize"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="set-selector-row">
+        <label for="setSelect" class="set-select-label">
+          <i data-lucide="book-open"></i> To‘plam:
+        </label>
+        <div class="custom-select-wrapper">
+          <select id="setSelect" class="set-select" aria-label="Lug'at to'plamini tanlash"></select>
+        </div>
+        <div class="set-action-btns">
+          <button class="btn-add-set" id="openAddSetModalBtn" title="Yangi lug'at to'plami qo'shish (JSON)">
+            <i data-lucide="plus"></i> Yangi to‘plam (JSON)
+          </button>
+          <button class="btn-del-set" id="deleteCurrentSetBtn" title="Ushbu maxsus to'plamni o'chirish">
+            <i data-lucide="trash-2"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quizlet Tabs Navigation -->
+    <nav class="nav-tabs" role="tablist">
+      <button class="nav-tab active" data-tab="kartochkalar" role="tab" aria-selected="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        Kartochkalar
+      </button>
+      <button class="nav-tab" data-tab="test-learn" role="tab" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        Test / Learn
+      </button>
+      <button class="nav-tab" data-tab="match-game" role="tab" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        Match Game
+      </button>
+      <button class="nav-tab" data-tab="lugat" role="tab" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        Lug‘at
+      </button>
+    </nav>
+
+    <!-- TAB 1: KARTOCHKALAR (FLASHCARDS) -->
+        <main class="tab-content active" id="tab-kartochkalar" role="tabpanel">
+
+      <div class="flashcards-container" id="flashcardsActiveArea">
+
+        <!-- Subbar: Starred Filter, Auto-Play, Swap Sides, Shuffle -->
+
+        <div class="card-subbar">
+
+          <div class="counter-display">
+
+            <span id="currentCardNum">1</span> / <span id="totalCardsNum">0</span>
+
+          </div>
+
+
+
+          <div class="top-actions">
+
+            <!-- Star filter button -->
+
+            <button class="pill-btn pill-btn-star" id="starredFilterBtn" title="Faqat yulduzchali (qiyin) so'zlarni ko'rish">
+
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 8 12 2"/></svg> <span id="starredFilterText">Qiyin so'zlar</span> (<span id="starredCountBadge">0</span>)
+
+            </button>
+
+
+
+            <!-- Swap sides button -->
+
+            <button class="pill-btn" id="swapSidesBtn" title="Old va orqa tomonni almashtirish (Inglizcha ⇄ O'zbekcha)">
+
+              <i data-lucide="refresh-cw"></i> <span id="swapSidesText">So'z ➔ Ta'rif</span>
+
+            </button>
+
+
+
+            <!-- Auto-play button -->
+
+            <button class="pill-btn" id="autoPlayBtn" title="Avtomatik o'qib berish rejimi">
+
+              <i data-lucide="play"></i> <span id="autoPlayText">Avto-ijro</span>
+
+            </button>
+
+
+
+            <!-- Shuffle button -->
+
+            <button class="pill-btn" id="shuffleBtn" title="Aralashtirish">
+
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                <polyline points="16 3 21 3 21 8"></polyline>
+
+                <line x1="4" y1="20" x2="21" y2="3"></line>
+
+                <polyline points="21 16 21 21 16 21"></polyline>
+
+                <line x1="15" y1="15" x2="21" y2="21"></line>
+
+                <line x1="4" y1="4" x2="9" y2="9"></line>
+
+              </svg>
+
+              Aralashtirish
+
+            </button>
+
+            <!-- Reset Order button -->
+
+            <button class="pill-btn" id="resetOrderBtn" title="Asl tartibni tiklash">
+
+                <i data-lucide="refresh-cw"></i> <span id="resetOrderText">Tiklash</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Progress bar -->
+
+        <div class="progress-bar-container">
+
+          <div class="progress-bar" id="flashcardProgressBar"></div>
+
+        </div>
+
+
+
+        <!-- 3D Card with Direct Star Button & Audio -->
+
+        <div class="scene" id="cardScene">
+
+          <div class="card" id="flashcard" role="button" tabindex="0" aria-label="Kartochkani aylantirish">
+
+            <!-- Front Face -->
+
+            <div class="card-face card-face-front">
+
+              <div class="card-top">
+
+                <span class="card-badge" id="frontCardBadge">So‘z / Term</span>
+
+                <div class="card-header-actions">
+
+                  <button class="icon-action-btn star-btn" id="starCurrentCardBtn" title="Yulduzcha qo'yish (Qiyin so'z)" aria-label="Yulduzcha">
+
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+
+                    </svg>
+
+                  </button>
+
+                  <button class="icon-action-btn" id="speakFrontBtn" title="Talaffuz qilish" aria-label="Talaffuz qilish">
+
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+
+                    </svg>
+
+                  </button>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="card-body">
+
+                <div class="word-text" id="cardWord">Yuklanmoqda...</div>
+
+              </div>
+
+
+
+              <div class="card-footer">
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+
+                  <path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/>
+
+                </svg>
+
+                Aylantirish uchun bosing
+
+              </div>
+
+            </div>
+
+
+
+            <!-- Back Face -->
+
+            <div class="card-face card-face-back">
+
+              <div class="card-top">
+
+                <span class="card-badge" id="backCardBadge">Ta'rif & Ma'nosi</span>
+
+                <div class="card-header-actions">
+
+                  <button class="icon-action-btn star-btn" id="starCurrentCardBackBtn" title="Yulduzcha qo'yish" aria-label="Yulduzcha">
+
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+
+                    </svg>
+
+                  </button>
+
+                  <button class="icon-action-btn" id="speakBackBtn" title="Talaffuz qilish" aria-label="Talaffuz qilish">
+
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+
+                    </svg>
+
+                  </button>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="card-body">
+
+                <div class="back-content">
+
+                  <div class="synonym-pill" id="synonymPillBox">
+
+                    <span class="synonym-title">Sinonim:</span>
+
+                    <span class="synonym-val" id="cardSynonym">---</span>
+
+                  </div>
+
+                  <p class="definition-text" id="cardDefinition">---</p>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="card-footer">
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+
+                  <path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/>
+
+                </svg>
+
+                Oldingi tomonga qaytish uchun bosing
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Bottom Controls -->
+
+        <div class="flashcard-controls">
+
+          <button class="btn btn-nav" id="prevBtn" title="Oldingi kartochka">
+
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+
+              <polyline points="15 18 9 12 15 6"></polyline>
+
+            </svg>
+
+            <span>Oldingisi</span>
+
+          </button>
+
+
+
+          <button class="btn btn-flip" id="flipBtn" title="Kartochkani aylantirish">
+
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+
+            </svg>
+
+            <span>Aylantirish</span>
+
+          </button>
+
+
+
+          <button class="btn btn-nav" id="nextBtn" title="Keyingi kartochka">
+
+            <span>Keyingisi</span>
+
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+
+              <polyline points="9 18 15 12 9 6"></polyline>
+
+            </svg>
+
+          </button>
+
+        </div>
+
+
+
+        <p class="hints-text">
+
+          Tugmalar: <span class="kbd">Space</span> aylantirish, <span class="kbd">←</span> <span class="kbd">→</span> oldinga / orqaga, <span class="kbd">S</span> yulduzcha <i data-lucide="star"></i> <br>
+
+          📱 <em>Telefonda barmoq bilan chapga/o'ngga surish (Swipe) mumkin</em>
+
+        </p>
+
+      </div>
+
+    
+      <!-- Flashcard Completion / Results Screen -->
+      <div class="flashcard-summary-card" id="flashcardSummaryArea" style="display: none;">
+        <div class="summary-icon-circle">
+          <i data-lucide="award"></i>
+        </div>
+        <h2 class="summary-title">To‘plam yakunlandi!</h2>
+        <p class="summary-subtitle" id="flashcardSummarySubtitle">Barcha kartochkalarni muvaffaqiyatli ko‘rib chiqdingiz.</p>
+
+        <div class="summary-stats-grid">
+          <div class="summary-stat-box">
+            <span class="stat-number" id="sumTotalWords">0</span>
+            <span class="stat-label">Ko‘rilgan so‘zlar</span>
+          </div>
+          <div class="summary-stat-box starred">
+            <span class="stat-number" id="sumStarredWords">0</span>
+            <span class="stat-label">Qiyin so‘zlar ⭐</span>
+          </div>
+          <div class="summary-stat-box mastered">
+            <span class="stat-number" id="sumMasteredWords">0</span>
+            <span class="stat-label">O‘zlashtirilgan</span>
+          </div>
+        </div>
+
+        <div class="summary-action-btns">
+          <button class="btn btn-flip" id="restartFlashcardsBtn" style="width: 100%;">
+            <i data-lucide="rotate-ccw"></i> Qaytadan boshlash
+          </button>
+          <button class="pill-btn" id="practiceStarredBtn" style="padding: 12px 18px; font-size: 14px; justify-content: center; width: 100%;">
+            <i data-lucide="star"></i> Faqat qiyin so‘zlarni takrorlash (<span id="sumStarredBtnCount">0</span>)
+          </button>
+          <div class="summary-action-row">
+            <button class="pill-btn" id="summaryShuffleBtn" style="flex: 1; padding: 11px 14px; font-size: 13px; justify-content: center;">
+              <i data-lucide="shuffle"></i> Aralashtirish
+            </button>
+            <button class="pill-btn active" id="summaryGoToQuizBtn" style="flex: 1.2; padding: 11px 14px; font-size: 13px; justify-content: center;">
+              <i data-lucide="brain"></i> Test topshirish
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+    <!-- TAB 2: TEST / LEARN -->
+
+    <section class="tab-content" id="tab-test-learn" role="tabpanel">
+
+      <div class="learn-container">
+
+        <div class="quiz-header">
+
+          <div class="counter-display">
+
+            Savol <span id="quizCurrentNum">1</span> / <span id="quizTotalNum">0</span>
+
+          </div>
+
+          <div class="quiz-score-badge">
+
+            <span class="score-correct">To‘g‘ri: <span id="quizScoreCorrect">0</span></span>
+
+            <span class="score-wrong">Xato: <span id="quizScoreWrong">0</span></span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="progress-bar-container" style="margin-bottom: 16px;">
+
+          <div class="progress-bar" id="quizProgressBar"></div>
+
+        </div>
+
+
+
+        <div id="quizActiveArea">
+
+          <div class="quiz-question-box">
+
+            <div class="quiz-def-label" id="quizQuestionLabel">Ta'rif va ma'nosi:</div>
+
+            <div class="quiz-question-text" id="quizQuestionText">Savol yuklanmoqda...</div>
+
+          </div>
+
+
+
+          <div class="quiz-options" id="quizOptionsContainer">
+
+            <!-- Options dynamically injected -->
+
+          </div>
+
+
+
+          <div class="quiz-feedback" id="quizFeedback"></div>
+
+
+
+          <div class="quiz-footer">
+
+            <button class="btn btn-flip" id="quizNextBtn" style="display: none; width: 100%;">Keyingi savol (Enter ↵) →</button>
+
+          </div>
+
+        </div>
+
+
+
+        <div id="quizSummaryArea" style="display: none; text-align: center; padding: 24px 8px;">
+
+          <h2 style="font-size: 22px; margin-bottom: 10px; color: var(--primary);">Test Yakunlandi! <i data-lucide="party-popper"></i></h2>
+
+          <p id="quizSummaryText" style="font-size: 15px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5;"></p>
+
+          <button class="btn btn-flip" id="quizRestartBtn" style="width: 100%; max-width: 260px;">Qaytadan boshlash (Enter ↵)</button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- TAB 3: MATCH GAME -->
+
+    <section class="tab-content" id="tab-match-game" role="tabpanel">
+
+      <div class="match-container">
+
+        <div class="match-header">
+
+          <div class="counter-display">
+
+            Qoldi: <span id="matchPairsLeft">6</span> ta juftlik
+
+          </div>
+
+          <div class="match-timer" id="matchTimer">
+
+            ⏱️ <span id="timerText">00:00.0</span>
+
+          </div>
+
+          <button class="pill-btn" id="matchRestartBtn">
+
+            <i data-lucide="refresh-cw"></i> Yangi o'yin
+
+          </button>
+
+        </div>
+
+
+
+        <div class="match-grid" id="matchGrid">
+
+          <!-- Dynamically populated tiles -->
+
+        </div>
+
+
+
+        <div class="victory-box" id="matchVictory" style="display: none;">
+
+          <div class="victory-title">Ajoyib natija! 🏆</div>
+
+          <p id="victoryTimeMsg" style="font-size: 15px; color: var(--text-muted); line-height: 1.5;"></p>
+
+          <button class="btn btn-flip" id="matchPlayAgainBtn" style="width: 100%; max-width: 240px;">Qaytadan o'ynash</button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- TAB 4: LUG‘AT -->
+
+    <section class="tab-content" id="tab-lugat" role="tabpanel">
+
+      <div class="dict-container">
+
+        <div class="dict-top-bar">
+
+          <div class="search-box">
+
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#718096" style="flex-shrink: 0;">
+
+              <circle cx="11" cy="11" r="8"></circle>
+
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+
+            </svg>
+
+            <input type="text" id="dictSearchInput" placeholder="So'z, sinonim yoki ta'rif qidiring..." autocomplete="off">
+
+            <span id="dictResultCount" style="font-size: 11px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">0 ta so'z</span>
+
+          </div>
+
+
+
+          <div class="dict-action-btns">
+
+            <button class="pill-btn" id="copyAllWordsBtn" title="Barcha so'zlarni nusxalash (Clipboard)">
+
+              <i data-lucide="clipboard"></i> Nusxa olish
+
+            </button>
+
+            <button class="pill-btn" id="exportJsonBtn" title="Ushbu to'plamni JSON sifatida yuklab olish">
+
+              <i data-lucide="save"></i> Eksport (.json)
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="dict-list" id="dictList">
+
+          <!-- Populated dynamically -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+
+  <div class="modal-overlay" id="addSetModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i data-lucide="plus"></i> Yangi Lug'at To'plami Qo'shish</h3>
+        <button class="modal-close-btn" id="closeAddSetModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="newSetName">To'plam Nomi (Mavzu)</label>
+          <input type="text" id="newSetName" class="form-input" placeholder="Masalan: Unit 5 - Environment Vocabulary">
+        </div>
+
+        <div class="file-upload-row">
+          <label style="cursor: pointer; display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--primary);">
+            <i data-lucide="upload"></i>
+            JSON faylni yuklash (.json)
+            <input type="file" id="jsonFileInput" accept=".json" style="display: none;">
+          </label>
+          <span>yoki quyidagi maydonga joylang:</span>
+        </div>
+
+        <div class="form-group">
+          <label for="newSetJson">JSON Ma'lumotlari</label>
+          <textarea id="newSetJson" class="form-textarea" placeholder='[&#10;  {&#10;    "word": "innovation",&#10;    "synonyms": ["development"],&#10;    "definition": "yangilik, innovatsiya"&#10;  }&#10;]'></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="pill-btn" id="cancelAddSetBtn" style="border: 1px solid var(--border);">Bekor qilish</button>
+        <button class="btn btn-flip" id="saveNewSetBtn">Saqlash va Yuklash</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Deck shuffled!</div>
+
+  <script>
+
+    /* ====================================================
+       WEB AUDIO SYNTHESIZER SOUND EFFECTS
+       ==================================================== */
+    let soundFxEnabled = localStorage.getItem('quizlet_sound_fx') !== 'false';
+    let audioCtx = null;
+    let audioCtxInitialized = false;
+
+    function initAudioContext() {
+      if (!audioCtxInitialized && (window.AudioContext || window.webkitAudioContext)) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        audioCtxInitialized = true;
+      }
+    }
+
+    document.addEventListener('click', initAudioContext, { once: true });
+    document.addEventListener('touchstart', initAudioContext, { once: true });
+    document.addEventListener('keydown', initAudioContext, { once: true });
+
+    function playTone(freq, type = 'sine', duration = 0.15, gainVal = 0.12) {
+      if (!soundFxEnabled || !audioCtx) return;
+      try {
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(gainVal, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    function soundFlip() { playTone(440, 'triangle', 0.08, 0.08); }
+    function soundCorrect() {
+      playTone(523.25, 'sine', 0.12, 0.1);
+      setTimeout(() => playTone(659.25, 'sine', 0.18, 0.1), 80);
+    }
+    function soundWrong() {
+      playTone(220, 'sawtooth', 0.18, 0.12);
+      setTimeout(() => playTone(180, 'sawtooth', 0.22, 0.12), 100);
+    }
+    function soundMatch() {
+      playTone(587.33, 'triangle', 0.1, 0.1);
+      setTimeout(() => playTone(880, 'triangle', 0.2, 0.12), 90);
+    }
+
+    /* ====================================================
+       BUILT-IN PRESET DATASETS
+       ==================================================== */
+    const PRESET_SETS = [
+      {
+        id: "set-2",
+        title: "Thinking, Change & Society",
+        subtitle: "Vocabulary, Synonyms & Uzbek Definitions (87 ta so'z)",
+        isPreset: true,
+        data: [
+          {"word": "assume", "synonyms": ["presume"], "definition": "taxmin qilmoq, deb hisoblamoq"},
+          {"word": "genius", "synonyms": [], "definition": "daho, juda aqlli inson"},
+          {"word": "belief", "synonyms": ["faith"], "definition": "ishonch, e'tiqod"},
+          {"word": "reckon", "synonyms": ["consider"], "definition": "deb o'ylamoq, hisoblamoq"},
+          {"word": "speculate", "synonyms": ["hypothesize"], "definition": "taxmin qilmoq, faraz yuritmoq"},
+          {"word": "gather", "synonyms": ["deduce"], "definition": "xulosa qilmoq, tushunmoq; yig'moq"},
+          {"word": "hunch", "synonyms": [], "definition": "ichki sezgi, taxmin"},
+          {"word": "estimate (verb)", "synonyms": [], "definition": "taxminan hisoblamoq, baholamoq"},
+          {"word": "estimate (noun)", "synonyms": ["estimation"], "definition": "taxminiy hisob, baho"},
+          {"word": "foregone conclusion", "synonyms": [], "definition": "oldindan aniq bo'lgan natija"},
+          {"word": "ideology", "synonyms": [], "definition": "mafkura, g'oyalar tizimi"},
+          {"word": "cynical", "synonyms": ["skeptical"], "definition": "ishonchsiz, boshqalarning niyatiga shubha bilan qaraydigan"},
+          {"word": "concept", "synonyms": ["notion"], "definition": "tushuncha, fikr"},
+          {"word": "doubtful", "synonyms": ["dubious"], "definition": "shubhali, ishonchsiz"},
+          {"word": "deliberate", "synonyms": ["intentional"], "definition": "ataylab qilingan, qasddan"},
+          {"word": "express a belief", "synonyms": ["assert"], "definition": "ishonch yoki fikrni bildirmoq"},
+          {"word": "conclude", "synonyms": ["make a deduction"], "definition": "xulosaga kelmoq"},
+          {"word": "dilemma", "synonyms": [], "definition": "dilemma, qiyin tanlov"},
+          {"word": "concentrate", "synonyms": ["focus"], "definition": "diqqatni jamlamoq"},
+          {"word": "ponder", "synonyms": ["contemplate"], "definition": "chuqur o'ylab ko'rmoq"},
+          {"word": "account for", "synonyms": [], "definition": "sababini tushuntirmoq; tashkil etmoq"},
+          {"word": "reach a conclusion", "synonyms": [], "definition": "xulosaga kelmoq"},
+          {"word": "elaborate", "synonyms": [], "definition": "batafsil bayon qilmoq"},
+          {"word": "baffled", "synonyms": ["disoriented"], "definition": "muvozanatini yo'qotgan, dovdirab qolgan"},
+          {"word": "optimistic", "synonyms": [], "definition": "optimistik, ijobiy fikrlovchi"},
+          {"word": "pessimistic", "synonyms": [], "definition": "pessimistik, salbiy fikrlovchi"},
+          {"word": "basis", "synonyms": ["grounds"], "definition": "biror narsa uchun asos"},
+          {"word": "take into account", "synonyms": ["consider"], "definition": "hisobga olmoq, e'tiborga olmoq"},
+          {"word": "intuition", "synonyms": ["instinct"], "definition": "ichki sezgi"},
+          {"word": "justify", "synonyms": [], "definition": "asoslamoq, oqlamoq"},
+          {"word": "underlying causes", "synonyms": ["root causes"], "definition": "asosiy tub sabablar"},
+          {"word": "criminal behaviour", "synonyms": ["unlawful conduct"], "definition": "jinoiy xatti-harakat"},
+          {"word": "serious consequences", "synonyms": ["severe repercussions"], "definition": "jiddiy oqibatlar"},
+          {"word": "repeat offenders", "synonyms": ["habitual offenders"], "definition": "qayta jinoyat sodir etuvchilar"},
+          {"word": "employment prospects", "synonyms": ["job prospects"], "definition": "ishga joylashish istiqbollari"},
+          {"word": "vocational training", "synonyms": ["occupational training"], "definition": "kasb-hunar ta'limi"},
+          {"word": "correctional system", "synonyms": ["prison system"], "definition": "jazoni ijro etish tizimi"},
+          {"word": "prison terms", "synonyms": ["custodial sentences"], "definition": "qamoq jazosi muddatlari"},
+          {"word": "break the law", "synonyms": ["violate the law"], "definition": "qonunni buzmoq"},
+          {"word": "address difficulties", "synonyms": ["tackle problems"], "definition": "qiyinchiliklarni hal etmoq"},
+          {"word": "deliver a message", "synonyms": ["convey a message"], "definition": "xabarni yetkazmoq"},
+          {"word": "impose punishment", "synonyms": ["administer punishment"], "definition": "jazo tayinlamoq"},
+          {"word": "reduce recidivism", "synonyms": ["reduce reoffending"], "definition": "qayta jinoyat sodir etishni kamaytirmoq"},
+          {"word": "provide counselling", "synonyms": ["offer counselling"], "definition": "maslahat yordamini ko'rsatmoq"},
+          {"word": "prevent offending", "synonyms": ["prevent crime"], "definition": "jinoyat sodir etishning oldini olmoq"},
+          {"word": "ensure reintegration", "synonyms": ["facilitate reintegration"], "definition": "jamiyatga qayta moslashishni ta'minlamoq"},
+          {"word": "improve employability", "synonyms": ["enhance employability"], "definition": "ishga joylashish imkoniyatini oshirmoq"},
+          {"word": "reflect the gravity", "synonyms": ["reflect the seriousness"], "definition": "jiddiylik darajasini aks ettirmoq"},
+          {"word": "commit crimes", "synonyms": ["perpetrate crimes"], "definition": "jinoyat sodir etmoq"},
+          {"word": "create opportunities", "synonyms": ["provide opportunities"], "definition": "imkoniyatlar yaratmoq"},
+          {"word": "status quo", "synonyms": ["current situation"], "definition": "mavjud holat, hozirgi vaziyat"},
+          {"word": "transform", "synonyms": ["change completely"], "definition": "tubdan o'zgartirmoq"},
+          {"word": "dynamic", "synonyms": ["active"], "definition": "faol, doimiy o'zgarib turadigan"},
+          {"word": "evolve", "synonyms": ["develop"], "definition": "asta-sekin rivojlanmoq, o'zgarib bormoq"},
+          {"word": "remain", "synonyms": ["continue"], "definition": "qolmoq, o'z holicha qolmoq"},
+          {"word": "shift (noun)", "synonyms": ["change"], "definition": "o'zgarish, siljish"},
+          {"word": "adapt", "synonyms": ["adjust"], "definition": "moslashmoq"},
+          {"word": "switch (verb)", "synonyms": ["change"], "definition": "almashtirmoq, o'zgartirmoq"},
+          {"word": "substitute (noun)", "synonyms": ["replacement"], "definition": "o'rnini bosuvchi narsa yoki shaxs"},
+          {"word": "tell the difference", "synonyms": ["distinguish"], "definition": "farqini ajratmoq"},
+          {"word": "in other words", "synonyms": ["to put it differently"], "definition": "boshqacha aytganda"},
+          {"word": "modify", "synonyms": ["alter"], "definition": "o'zgartirmoq, qisman o'zgartirmoq"},
+          {"word": "adjust", "synonyms": ["adapt"], "definition": "moslashtirmoq, biroz o'zgartirmoq"},
+          {"word": "maintain", "synonyms": ["preserve"], "definition": "saqlab turmoq, davom ettirmoq"},
+          {"word": "refine", "synonyms": ["improve"], "definition": "takomillashtirmoq, yaxshilamoq"},
+          {"word": "revise", "synonyms": ["change"], "definition": "qayta ko'rib chiqmoq, tuzatmoq"},
+          {"word": "alternative", "synonyms": ["option"], "definition": "muqobil, boshqa variant"},
+          {"word": "alternate (verb)", "synonyms": ["occur in turns"], "definition": "navbatma-navbat qilmoq"},
+          {"word": "reform (noun)", "synonyms": ["improvement"], "definition": "islohot, yaxshilashga qaratilgan o'zgarish"},
+          {"word": "innovation", "synonyms": ["development"], "definition": "yangilik, innovatsiya"},
+          {"word": "revolution", "synonyms": ["dramatic change"], "definition": "inqilob, tub o'zgarish"},
+          {"word": "conservative", "synonyms": ["cautious"], "definition": "an'anaviy, o'zgarishga ehtiyotkor"},
+          {"word": "amend", "synonyms": ["correct"], "definition": "tuzatish kiritmoq, o'zgartirmoq"},
+          {"word": "deteriorate", "synonyms": ["worsen"], "definition": "yomonlashmoq"},
+          {"word": "decay", "synonyms": ["decline"], "definition": "chirimoq, yemirilmoq; buzilish"},
+          {"word": "distort", "synonyms": ["misrepresent"], "definition": "buzib ko'rsatmoq, noto'g'ri talqin qilmoq"},
+          {"word": "speak your mind", "synonyms": ["express yourself honestly"], "definition": "fikrini ochiq aytmoq"},
+          {"word": "express an opinion", "synonyms": ["give your view"], "definition": "fikr bildirmoq"},
+          {"word": "talk down to", "synonyms": ["patronize"], "definition": "kimgadir mensimay gapirmoq"},
+          {"word": "have your say", "synonyms": ["express your opinion"], "definition": "o'z fikrini bildirmoq"},
+          {"word": "talk over", "synonyms": ["discuss"], "definition": "muhokama qilmoq"},
+          {"word": "talk through", "synonyms": ["discuss in detail"], "definition": "batafsil muhokama qilmoq, bosqichma-bosqich tushuntirmoq"},
+          {"word": "potential (noun)", "synonyms": ["possibility"], "definition": "salohiyat, imkoniyat"},
+          {"word": "innovative", "synonyms": ["original"], "definition": "innovatsion, yangicha"},
+          {"word": "progress", "synonyms": ["development"], "definition": "taraqqiyot, rivojlanish"},
+          {"word": "sustain", "synonyms": ["support"], "definition": "davom ettirmoq, saqlab turmoq"},
+          {"word": "endure", "synonyms": ["continue"], "definition": "chidamoq, bardosh bermoq; davom etmoq"}
+        ]
+      },
+      {
+        id: "set-1",
+        title: "Map & Directions",
+        subtitle: "English Prepositions, Directions & Distances (52 Words)",
+        isPreset: true,
+        data: [
+          {"word": "negotiating power", "synonyms": ["bargaining power"], "definition": "The capacity to influence an agreement or discussion to your advantage, especially regarding salary."},
+          {"word": "gain expertise", "synonyms": ["acquire up-to-date expertise"], "definition": "To learn the latest, most relevant skills and knowledge in a specific profession."},
+          {"word": "organisational culture", "synonyms": ["workplace culture"], "definition": "The shared values, behaviors, and social environment within a company."},
+          {"word": "employment mobility", "synonyms": ["internal mobility"], "definition": "The ability of employees to move between different roles or departments within a company."},
+          {"word": "hiring costs", "synonyms": ["recruitment costs"], "definition": "The financial expenses involved in finding, interviewing, and employing new staff."},
+          {"word": "career advancement", "synonyms": ["career progression"], "definition": "The process of moving forward and upward in one's professional life and roles."},
+          {"word": "keep employees", "synonyms": ["retaining experienced staff"], "definition": "The ability of an organization to prevent its best and most skilled workers from leaving."},
+          {"word": "management positions", "synonyms": ["leadership roles"], "definition": "Jobs that involve overseeing other employees, guiding teams, and making strategic decisions."},
+          {"word": "work history", "synonyms": ["employment history"], "definition": "A formal record of all the jobs and roles a person has held in the past."},
+          {"word": "in-house advancement", "synonyms": ["internal promotion"], "definition": "Being elevated to a higher, more responsible position within the same organization."},
+          {"word": "financial stability", "synonyms": ["predictable income"], "definition": "Earning a steady, reliable, and secure amount of money over time."},
+          {"word": "leadership approaches", "synonyms": ["management styles"], "definition": "The various methods and behaviors managers use to handle their teams and projects."},
+          {"word": "retain expertise", "synonyms": ["preserves valuable expertise"], "definition": "Keeping highly skilled knowledge and institutional memory within the organization."},
+          {"word": "advancement opportunities", "synonyms": ["promotion opportunities"], "definition": "Chances or openings to move up to a better, higher-paying role in a company."},
+          {"word": "job market", "synonyms": ["labour market"], "definition": "The supply of available workers in relation to the available work and open positions."},
+          {"word": "employment stability", "synonyms": ["job security"], "definition": "The likelihood that a person will keep their job without the risk of being fired or laid off."},
+          {"word": "career standstill", "synonyms": ["career stagnation"], "definition": "A situation where a person's professional growth and advancement completely stop."},
+          {"word": "discuss pay", "synonyms": ["negotiating salaries"], "definition": "The act of discussing and agreeing on compensation and benefits with an employer."},
+          {"word": "internal movement", "synonyms": ["internal mobility"], "definition": "Transitioning to different departments or taking on different duties inside the same company."},
+          {"word": "professional connections", "synonyms": ["professional networks"], "definition": "Relationships built with other professionals for mutual business and career benefits."},
+          {"word": "presume", "synonyms": ["suppose"], "definition": "To accept that something is true without absolute proof or certainty."},
+          {"word": "genius", "synonyms": ["brilliance"], "definition": "Exceptional intellectual, creative, or natural mental power."},
+          {"word": "faith", "synonyms": ["trust"], "definition": "Complete confidence or strong belief in someone or something."},
+          {"word": "reckon", "synonyms": ["believe"], "definition": "To think, assume, or conclude something to be true based on available facts."},
+          {"word": "speculate", "synonyms": ["guess"], "definition": "To form a theory or conjecture about a subject without having firm evidence."},
+          {"word": "gather", "synonyms": ["infer"], "definition": "To deduce or logically conclude information from evidence and reasoning."},
+          {"word": "hunch", "synonyms": ["instinct"], "definition": "A strong inner feeling or guess based on intuition rather than known facts."},
+          {"word": "estimate (verb)", "synonyms": ["approximate"], "definition": "To roughly calculate or judge the value, number, or quantity of something."},
+          {"word": "estimate (noun)", "synonyms": ["approximation"], "definition": "A rough calculation, judgment, or prediction of a value or quantity."},
+          {"word": "a foregone conclusion", "synonyms": ["an inevitable result"], "definition": "A result or outcome that can be predicted with absolute certainty before it happens."},
+          {"word": "ideology", "synonyms": ["belief system"], "definition": "A structured system of ideas, principles, and ideals that shape how someone views the world."},
+          {"word": "cynical", "synonyms": ["doubtful"], "definition": "Believing that people are motivated purely by self-interest; distrustful of human sincerity."},
+          {"word": "notion", "synonyms": ["idea"], "definition": "A conception, belief, or understanding of something."},
+          {"word": "dubious", "synonyms": ["questionable"], "definition": "Hesitating or doubting; not to be relied upon as completely honest or safe."},
+          {"word": "deliberate", "synonyms": ["consider"], "definition": "To engage in long, careful, and unhurried thought or discussion."},
+          {"word": "express belief", "synonyms": ["state an opinion"], "definition": "To clearly declare what one thinks or feels about a particular subject."},
+          {"word": "come to a conclusion", "synonyms": ["reach a judgement"], "definition": "To make a final decision or form a definitive opinion after considering all facts."},
+          {"word": "dilemma", "synonyms": ["problem"], "definition": "A difficult situation in which a choice has to be made between two or more undesirable alternatives."},
+          {"word": "concentrate", "synonyms": ["focus"], "definition": "To direct all of one's attention or mental effort on a particular object or activity."},
+          {"word": "contemplate", "synonyms": ["consider"], "definition": "To look thoughtfully at or think deeply about something for an extended period."},
+          {"word": "account for", "synonyms": ["explain"], "definition": "To provide a clear reason, justification, or explanation for an event or situation."},
+          {"word": "reach a conclusion", "synonyms": ["form a judgement"], "definition": "To arrive at a finalized decision or opinion through logic and reasoning."},
+          {"word": "give an account of", "synonyms": ["describe"], "definition": "To provide a detailed, descriptive narrative or explanation of an event."},
+          {"word": "off balance", "synonyms": ["confused"], "definition": "In an unsteady, uncertain state; taken by surprise or thrown into mental disarray."},
+          {"word": "optimistic", "synonyms": ["hopeful"], "definition": "Confident and positive about the future or the successful outcome of a situation."},
+          {"word": "pessimistic", "synonyms": ["negative"], "definition": "Tending to see the worst aspect of things or believing that the worst will happen."},
+          {"word": "basis for", "synonyms": ["reason for"], "definition": "The underlying support, foundation, or justification for an idea or argument."},
+          {"word": "take account of", "synonyms": ["consider"], "definition": "To actively think about or bear in mind specific factors when making a decision."},
+          {"word": "intuition", "synonyms": ["instinct"], "definition": "The ability to understand something immediately, without the need for conscious reasoning."},
+          {"word": "justify", "synonyms": ["defend"], "definition": "To show or prove a decision, action, or idea to be right or perfectly reasonable."},
+          {"word": "on balance", "synonyms": ["generally"], "definition": "When all factors have been considered; looking at a situation altogether."},
+          {"word": "a logical conclusion", "synonyms": ["a reasonable inference"], "definition": "A final deduction or decision made using sound, rational evidence and thought."}
+        ]
+      }
+    ];
+
+    // Data normalizer: handles any shape of JSON
+    function normalizeVocabList(arr) {
+      if (!Array.isArray(arr)) return [];
+      return arr.map(item => {
+        const word = (item.word || item.term || '').trim();
+        const definition = (item.definition || item.meaning || item.translation || '').trim();
+        let syns = [];
+        if (Array.isArray(item.synonyms)) {
+          syns = item.synonyms.map(s => String(s).trim()).filter(Boolean);
+        } else if (item.synonym) {
+          syns = [String(item.synonym).trim()];
+        } else if (typeof item.synonyms === 'string') {
+          syns = item.synonyms.split(',').map(s => s.trim()).filter(Boolean);
+        }
+        return { word, definition, synonyms: syns };
+      }).filter(item => item.word.length > 0);
+    }
+
+    // Set storage management
+    function getCustomSets() {
+      try {
+        const raw = localStorage.getItem('quizlet_custom_sets');
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveCustomSets(sets) {
+      localStorage.setItem('quizlet_custom_sets', JSON.stringify(sets));
+    }
+
+    function getAllSets() {
+      const customs = getCustomSets();
+      return [...PRESET_SETS, ...customs];
+    }
+
+    // Starred words management
+    function getStarredWords(setId) {
+      try {
+        const raw = localStorage.getItem(`quizlet_starred_${setId}`);
+        return raw ? new Set(JSON.parse(raw)) : new Set();
+      } catch (e) {
+        return new Set();
+      }
+    }
+
+    function saveStarredWords(setId, starredSet) {
+      localStorage.setItem(`quizlet_starred_${setId}`, JSON.stringify(Array.from(starredSet)));
+    }
+
+    // Active state
+    let allSets = getAllSets();
+    let currentSetId = localStorage.getItem('quizlet_active_set_id') || allSets[0].id;
+    let currentSet = allSets.find(s => s.id === currentSetId) || allSets[0];
+    let rawData = normalizeVocabList(currentSet.data);
+    let starredWords = getStarredWords(currentSet.id);
+    let isStarredOnly = false;
+    let isSwapped = false; // false = Word on Front, true = Definition on Front
+    let autoPlayInterval = null;
+    let isAutoPlaying = false;
+
+    let activeDeck = [...rawData];
+    let activeTabIndex = 'kartochkalar';
+
+    // UI elements
+    const setSelectEl = document.getElementById('setSelect');
+    const activeTopicTitleEl = document.getElementById('activeTopicTitle');
+    const activeTopicSubtitleEl = document.getElementById('activeTopicSubtitle');
+    const totalWordsBadgeEl = document.getElementById('totalWordsBadge');
+    const deleteCurrentSetBtn = document.getElementById('deleteCurrentSetBtn');
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const soundFxToggleBtn = document.getElementById('soundFxToggleBtn');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerHTML = msg;
+      refreshIcons();
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    function speakText(text) {
+      if (!('speechSynthesis' in window)) return;
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+      }
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-US';
+      u.rate = 0.92;
+      window.speechSynthesis.speak(u);
+    }
+
+    function formatSynonyms(item) {
+      if (Array.isArray(item.synonyms) && item.synonyms.length > 0) {
+        return item.synonyms.join(', ');
+      }
+      return '';
+    }
+
+    /* ====================================================
+       THEME, SOUND FX & FULLSCREEN
+       ==================================================== */
+    // Theme toggle
+    if (localStorage.getItem('quizlet_theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeToggleBtn.innerHTML = `<i data-lucide="sun"></i>`;
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      themeToggleBtn.innerHTML = isDark ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
+      localStorage.setItem('quizlet_theme', isDark ? 'dark' : 'light');
+      showToast(isDark ? `Tungi rejim yoqildi <i data-lucide="moon"></i>` : `Kunduzgi rejim yoqildi <i data-lucide="sun"></i>`);
+    });
+
+    // Sound FX toggle
+    soundFxToggleBtn.classList.toggle('active', soundFxEnabled);
+    soundFxToggleBtn.innerHTML = soundFxEnabled ? '<i data-lucide="volume-2"></i>' : '<i data-lucide="volume-x"></i>';
+    soundFxToggleBtn.addEventListener('click', () => {
+      soundFxEnabled = !soundFxEnabled;
+      localStorage.setItem('quizlet_sound_fx', soundFxEnabled);
+      soundFxToggleBtn.classList.toggle('active', soundFxEnabled);
+      soundFxToggleBtn.innerHTML = soundFxEnabled ? '<i data-lucide="volume-2"></i>' : '<i data-lucide="volume-x"></i>';
+      showToast(soundFxEnabled ? `Ovoz effektlari yoqildi <i data-lucide="volume-2"></i>` : `Ovoz effektlari o'chirildi <i data-lucide="volume-x"></i>`);
+    });
+
+    // Fullscreen toggle
+    fullscreenBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    });
+
+    /* ====================================================
+       SET MANAGEMENT
+       ==================================================== */
+    function renderSetDropdown() {
+      allSets = getAllSets();
+      setSelectEl.innerHTML = '';
+      allSets.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s.id;
+        opt.textContent = `${s.title} (${s.data.length} ta so'z)`;
+        if (s.id === currentSetId) opt.selected = true;
+        setSelectEl.appendChild(opt);
+      });
+      deleteCurrentSetBtn.style.display = currentSet.isPreset ? 'none' : 'flex';
+      updateStarredCountBadge();
+    }
+
+    function filterDeck() {
+      if (isStarredOnly) {
+        activeDeck = rawData.filter(item => starredWords.has(item.word));
+      } else {
+        activeDeck = [...rawData];
+      }
+    }
+
+    function switchSet(newId) {
+      stopAutoPlay();
+      const target = allSets.find(s => s.id === newId);
+      if (!target) return;
+      currentSetId = target.id;
+      currentSet = target;
+      localStorage.setItem('quizlet_active_set_id', currentSetId);
+
+      rawData = normalizeVocabList(currentSet.data);
+      starredWords = getStarredWords(currentSet.id);
+      isStarredOnly = false;
+      document.getElementById('starredFilterBtn').classList.remove('active');
+
+      filterDeck();
+
+      activeTopicTitleEl.innerHTML = `${currentSet.title} <span class="badge-count" id="totalWordsBadge">${rawData.length} Words</span>`;
+      activeTopicSubtitleEl.textContent = currentSet.subtitle || `Total ${rawData.length} words, synonyms & definitions`;
+      deleteCurrentSetBtn.style.display = currentSet.isPreset ? 'none' : 'flex';
+
+      currentCardIndex = 0;
+      cardFlipped = false;
+      totNumEl.textContent = activeDeck.length;
+      updateStarredCountBadge();
+      renderFlashcard();
+
+      if (activeTabIndex === 'test-learn') initQuiz();
+      if (activeTabIndex === 'match-game') startMatchGame();
+      renderDictionary(dictSearchInput.value);
+
+      showToast(`"${currentSet.title}" yuklandi! <i data-lucide="sparkles"></i>`);
+    }
+
+    setSelectEl.addEventListener('change', (e) => {
+      switchSet(e.target.value);
+    });
+
+    deleteCurrentSetBtn.addEventListener('click', () => {
+      if (currentSet.isPreset) return;
+      if (confirm(`Rostdan ham "${currentSet.title}" to‘plamini o‘chirmoqchimisiz?`)) {
+        let customs = getCustomSets().filter(s => s.id !== currentSet.id);
+        saveCustomSets(customs);
+        localStorage.removeItem(`quizlet_starred_${currentSet.id}`);
+        allSets = getAllSets();
+        renderSetDropdown();
+        switchSet(allSets[0].id);
+        showToast(`To‘plam o‘chirildi! <i data-lucide="trash-2"></i>`);
+      }
+    });
+
+    // Star count update
+    function updateStarredCountBadge() {
+      const badge = document.getElementById('starredCountBadge');
+      const count = rawData.filter(item => starredWords.has(item.word)).length;
+      badge.textContent = count;
+    }
+
+    function toggleStarWord(word) {
+      if (starredWords.has(word)) {
+        starredWords.delete(word);
+        showToast(`"<i data-lucide="star"></i>" olib tashlandi: ${word}`);
+      } else {
+        starredWords.add(word);
+        soundCorrect();
+        showToast(`"<i data-lucide="star"></i> Qiyin so'zlar"ga qo'shildi: ${word}`);
+      }
+      saveStarredWords(currentSet.id, starredWords);
+      updateStarredCountBadge();
+      updateStarIconUI();
+      renderDictionary(dictSearchInput.value);
+
+      if (isStarredOnly && !starredWords.has(word)) {
+        filterDeck();
+        if (currentCardIndex >= activeDeck.length) {
+          currentCardIndex = Math.max(0, activeDeck.length - 1);
+        }
+        renderFlashcard();
+      }
+    }
+
+    // Modal management
+    const addSetModal = document.getElementById('addSetModal');
+    const openAddSetModalBtn = document.getElementById('openAddSetModalBtn');
+    const closeAddSetModalBtn = document.getElementById('closeAddSetModalBtn');
+    const cancelAddSetBtn = document.getElementById('cancelAddSetBtn');
+    const saveNewSetBtn = document.getElementById('saveNewSetBtn');
+    const newSetNameInput = document.getElementById('newSetName');
+    const newSetJsonInput = document.getElementById('newSetJson');
+    const jsonFileInput = document.getElementById('jsonFileInput');
+
+    openAddSetModalBtn.addEventListener('click', () => {
+      newSetNameInput.value = '';
+      newSetJsonInput.value = '';
+      addSetModal.classList.add('active');
+      newSetNameInput.focus();
+    });
+
+    function closeModal() {
+      addSetModal.classList.remove('active');
+    }
+
+    closeAddSetModalBtn.addEventListener('click', closeModal);
+    cancelAddSetBtn.addEventListener('click', closeModal);
+
+    jsonFileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      if (!newSetNameInput.value.trim()) {
+        newSetNameInput.value = file.name.replace(/\.json$/i, '');
+      }
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        newSetJsonInput.value = event.target.result;
+      };
+      reader.readAsText(file);
+    });
+
+    saveNewSetBtn.addEventListener('click', () => {
+      const title = newSetNameInput.value.trim() || 'Yangi Lug‘at To‘plami';
+      const rawJson = newSetJsonInput.value.trim();
+
+      if (!rawJson) {
+        alert("Iltimos, JSON ma'lumotlarini kiriting yoki faylni yuklang!");
+        return;
+      }
+
+      let parsedData;
+      try {
+        parsedData = JSON.parse(rawJson);
+      } catch (err) {
+        alert("JSON formatida xatolik bor! Iltimos, to‘g‘ri JSON massiv ekanligini tekshiring.");
+        return;
+      }
+
+      const normalized = normalizeVocabList(parsedData);
+      if (normalized.length === 0) {
+        alert("JSON ichida birorta ham to‘g‘ri so‘z topilmadi! Har bir elementda kamida 'word' kaliti bo‘lishi kerak.");
+        return;
+      }
+
+      const newSetObj = {
+        id: "custom-" + Date.now(),
+        title: title,
+        subtitle: `${normalized.length} ta so'z va ta'riflar`,
+        isPreset: false,
+        data: normalized
+      };
+
+      const customs = getCustomSets();
+      customs.push(newSetObj);
+      saveCustomSets(customs);
+
+      renderSetDropdown();
+      switchSet(newSetObj.id);
+      closeModal();
+      showToast(`Yangi to‘plam (${normalized.length} ta so‘z) saqlandi! <i data-lucide="party-popper"></i>`);
+    });
+
+    // Tab Switching
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        stopAutoPlay();
+        if (typeof matchTimerInterval !== 'undefined') clearInterval(matchTimerInterval);
+        document.querySelectorAll('.nav-tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const target = tab.dataset.tab;
+        activeTabIndex = target;
+        document.getElementById(`tab-${target}`).classList.add('active');
+
+        tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+        if (target === 'test-learn') initQuiz();
+        if (target === 'match-game') startMatchGame();
+      });
+    });
+
+    /* ====================================================
+       1. KARTOCHKALAR (FLASHCARDS)
+       ==================================================== */
+    let currentCardIndex = 0;
+    let cardFlipped = false;
+
+    const cardEl = document.getElementById('flashcard');
+    const cardScene = document.getElementById('cardScene');
+    const wordEl = document.getElementById('cardWord');
+    const synEl = document.getElementById('cardSynonym');
+    const synonymPillBox = document.getElementById('synonymPillBox');
+    const defEl = document.getElementById('cardDefinition');
+    const curNumEl = document.getElementById('currentCardNum');
+    const totNumEl = document.getElementById('totalCardsNum');
+    const progBar = document.getElementById('flashcardProgressBar');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const flipBtn = document.getElementById('flipBtn');
+    const shuffleBtn = document.getElementById('shuffleBtn');
+    const resetOrderBtn = document.getElementById('resetOrderBtn');
+    const starredFilterBtn = document.getElementById('starredFilterBtn');
+    const swapSidesBtn = document.getElementById('swapSidesBtn');
+    const autoPlayBtn = document.getElementById('autoPlayBtn');
+    const starCurrentCardBtn = document.getElementById('starCurrentCardBtn');
+    const starCurrentCardBackBtn = document.getElementById('starCurrentCardBackBtn');
+    const frontCardBadge = document.getElementById('frontCardBadge');
+    const backCardBadge = document.getElementById('backCardBadge');
+
+    function updateStarIconUI() {
+      const item = activeDeck[currentCardIndex];
+      const isStarred = item && starredWords.has(item.word);
+      starCurrentCardBtn.classList.toggle('is-starred', Boolean(isStarred));
+      starCurrentCardBackBtn.classList.toggle('is-starred', Boolean(isStarred));
+      starCurrentCardBtn.innerHTML = isStarred 
+        ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`
+        : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
+      starCurrentCardBackBtn.innerHTML = starCurrentCardBtn.innerHTML;
+    }
+
+    function renderFlashcard() {
+      const activeArea = document.getElementById('flashcardsActiveArea');
+      const sumArea = document.getElementById('flashcardSummaryArea');
+      if (activeArea) activeArea.style.display = 'flex';
+      if (sumArea) sumArea.style.display = 'none';
+
+      if (activeDeck.length === 0) {
+        wordEl.textContent = isStarredOnly ? "Yulduzchali so'zlar yo'q" : "To'plam bo'sh";
+        synonymPillBox.style.display = 'none';
+        defEl.innerHTML = isStarredOnly ? `Kartochkalardagi <i data-lucide="star"></i> tugmasi orqali qiyin so'zlarni belgilang.` : `Iltimos yangi to'plam qo'shing`;
+        curNumEl.textContent = "0";
+        totNumEl.textContent = "0";
+        progBar.style.width = "0%";
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+        updateStarIconUI();
+        return;
+      }
+
+      const item = activeDeck[currentCardIndex];
+      const synText = formatSynonyms(item);
+
+      // Support Swap Sides (English on front vs Uzbek definition on front)
+      if (!isSwapped) {
+        frontCardBadge.textContent = "So‘z / Term";
+        backCardBadge.textContent = "Ta'rif & Ma'nosi";
+        wordEl.textContent = item.word;
+        defEl.textContent = item.definition;
+      } else {
+        frontCardBadge.textContent = "Ta'rif & Ma'nosi";
+        backCardBadge.textContent = "So‘z / Term";
+        wordEl.textContent = item.definition;
+        defEl.textContent = item.word;
+      }
+
+      if (synText) {
+        synEl.textContent = synText;
+        synonymPillBox.style.display = 'inline-flex';
+      } else {
+        synonymPillBox.style.display = 'none';
+      }
+
+      curNumEl.textContent = currentCardIndex + 1;
+      totNumEl.textContent = activeDeck.length;
+      const pct = ((currentCardIndex + 1) / activeDeck.length) * 100;
+      progBar.style.width = `${pct}%`;
+
+      prevBtn.disabled = currentCardIndex === 0;
+      if (currentCardIndex === activeDeck.length - 1) {
+        nextBtn.disabled = false;
+        nextBtn.innerHTML = `<span>Natija</span> <i data-lucide="award"></i>`;
+        nextBtn.classList.add('btn-finish');
+        nextBtn.title = "Natijani ko'rish";
+      } else {
+        nextBtn.disabled = false;
+        nextBtn.innerHTML = `<span>Keyingisi</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+        nextBtn.classList.remove('btn-finish');
+        nextBtn.title = "Keyingi kartochka";
+      }
+
+      if (cardFlipped) {
+        cardEl.classList.remove('is-flipped');
+        cardFlipped = false;
+      }
+
+      updateStarIconUI();
+      refreshIcons();
+    }
+
+    function toggleFlip() {
+      soundFlip();
+      cardFlipped = !cardFlipped;
+      cardEl.classList.toggle('is-flipped', cardFlipped);
+    }
+
+    function showFlashcardSummary() {
+      stopAutoPlay();
+      const activeArea = document.getElementById('flashcardsActiveArea');
+      const sumArea = document.getElementById('flashcardSummaryArea');
+      if (!activeArea || !sumArea) return;
+
+      const totalCount = activeDeck.length;
+      const starredInDeck = activeDeck.filter(item => starredWords.has(item.word)).length;
+      const masteredCount = Math.max(0, totalCount - starredInDeck);
+
+      document.getElementById('sumTotalWords').textContent = totalCount;
+      document.getElementById('sumStarredWords').textContent = starredInDeck;
+      document.getElementById('sumMasteredWords').textContent = masteredCount;
+      document.getElementById('sumStarredBtnCount').textContent = starredInDeck;
+
+      const practiceBtn = document.getElementById('practiceStarredBtn');
+      if (starredInDeck === 0) {
+        practiceBtn.style.opacity = '0.5';
+        practiceBtn.style.cursor = 'not-allowed';
+      } else {
+        practiceBtn.style.opacity = '1';
+        practiceBtn.style.cursor = 'pointer';
+      }
+
+      activeArea.style.display = 'none';
+      sumArea.style.display = 'flex';
+
+      soundMatch();
+      refreshIcons();
+    }
+
+    function nextFlashcard() {
+      if (currentCardIndex < activeDeck.length - 1) {
+        currentCardIndex++;
+        renderFlashcard();
+      } else {
+        showFlashcardSummary();
+      }
+    }
+
+    function prevFlashcard() {
+      const sumArea = document.getElementById('flashcardSummaryArea');
+      if (sumArea && sumArea.style.display !== 'none') {
+        renderFlashcard();
+        return;
+      }
+      if (currentCardIndex > 0) {
+        currentCardIndex--;
+        renderFlashcard();
+      }
+    }
+
+    cardEl.addEventListener('click', (e) => {
+      if (e.target.closest('.icon-action-btn')) return;
+      toggleFlip();
+    });
+
+    flipBtn.addEventListener('click', toggleFlip);
+    prevBtn.addEventListener('click', prevFlashcard);
+    nextBtn.addEventListener('click', nextFlashcard);
+
+    // Star button listeners
+    starCurrentCardBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (activeDeck[currentCardIndex]) toggleStarWord(activeDeck[currentCardIndex].word);
+    });
+    starCurrentCardBackBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (activeDeck[currentCardIndex]) toggleStarWord(activeDeck[currentCardIndex].word);
+    });
+
+    // Star filter toggle
+    starredFilterBtn.addEventListener('click', () => {
+      stopAutoPlay();
+      isStarredOnly = !isStarredOnly;
+      starredFilterBtn.classList.toggle('active', isStarredOnly);
+      filterDeck();
+      currentCardIndex = 0;
+      renderFlashcard();
+      showToast(isStarredOnly ? `Faqat yulduzchali so'zlar ko'rsatilmoqda <i data-lucide="star"></i>` : `Barcha so'zlar ko'rsatilmoqda <i data-lucide="clipboard"></i>`);
+    });
+
+    // Swap sides toggle
+    swapSidesBtn.addEventListener('click', () => {
+      isSwapped = !isSwapped;
+      swapSidesBtn.classList.toggle('active', isSwapped);
+      document.getElementById('swapSidesText').innerHTML = isSwapped ? "Ta'rif ➔ So'z" : "So'z ➔ Ta'rif";
+      renderFlashcard();
+      showToast(isSwapped ? "Oldinda: O'zbekcha ta'rif, orqada: Inglizcha so'z" : "Oldinda: Inglizcha so'z, orqada: O'zbekcha ta'rif");
+    });
+
+    // Auto-play hands-free mode
+    function stopAutoPlay() {
+      if (autoPlayInterval) {
+        clearTimeout(autoPlayInterval);
+        autoPlayInterval = null;
+      }
+      isAutoPlaying = false;
+      autoPlayBtn.classList.remove('active');
+      document.getElementById('autoPlayText').innerHTML = "Avto-ijro";
+    }
+
+    function startAutoPlay() {
+      if (activeDeck.length === 0) return;
+      isAutoPlaying = true;
+      autoPlayBtn.classList.add('active');
+      document.getElementById('autoPlayText').innerHTML = `To'xtatish <i data-lucide="pause"></i>`;
+      showToast(`Avtomatik ijro boshlandi! <i data-lucide="headphones"></i>`);
+
+      function step() {
+        if (!isAutoPlaying) return;
+        // 1. Read front
+        speakText(activeDeck[currentCardIndex].word);
+
+        // 2. Wait 2.2s then flip
+        autoPlayInterval = setTimeout(() => {
+          if (!isAutoPlaying) return;
+          toggleFlip();
+
+          // 3. Wait 2.5s then go next
+          autoPlayInterval = setTimeout(() => {
+            if (!isAutoPlaying) return;
+            if (currentCardIndex < activeDeck.length - 1) {
+              currentCardIndex++;
+              renderFlashcard();
+              autoPlayInterval = setTimeout(step, 800);
+            } else {
+              stopAutoPlay();
+              showToast(`Barcha kartochkalar o'qib bo'lindi! <i data-lucide="party-popper"></i>`);
+              showFlashcardSummary();
+            }
+          }, 2500);
+        }, 2200);
+      }
+
+      step();
+    }
+
+    autoPlayBtn.addEventListener('click', () => {
+      if (isAutoPlaying) {
+        stopAutoPlay();
+        showToast("Avto-ijro to'xtatildi.");
+      } else {
+        startAutoPlay();
+      }
+    });
+
+    // Shuffle & Reset
+    shuffleBtn.addEventListener('click', () => {
+      stopAutoPlay();
+      for (let i = activeDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [activeDeck[i], activeDeck[j]] = [activeDeck[j], activeDeck[i]];
+      }
+      currentCardIndex = 0;
+      renderFlashcard();
+      showToast(`Kartochkalar aralashtirildi! <i data-lucide="shuffle"></i>`)
+    });
+
+    resetOrderBtn.addEventListener('click', () => {
+      stopAutoPlay();
+      filterDeck();
+      currentCardIndex = 0;
+      renderFlashcard();
+      showToast(`Asl tartib tiklandi! <i data-lucide="clipboard"></i>`)
+    });
+
+    document.getElementById('speakFrontBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (activeDeck[currentCardIndex]) speakText(activeDeck[currentCardIndex].word);
+    });
+
+    document.getElementById('speakBackBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (activeDeck[currentCardIndex]) speakText(activeDeck[currentCardIndex].word);
+    });
+
+    // Touch Swipe Gestures
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    let isSwiping = false;
+
+    cardScene.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+      isSwiping = true;
+    }, { passive: true });
+
+    cardScene.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      const currentX = e.changedTouches[0].screenX;
+      const currentY = e.changedTouches[0].screenY;
+      const diffX = currentX - touchStartX;
+      const diffY = currentY - touchStartY;
+
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 25) {
+        if (e.cancelable) e.preventDefault();
+        if (diffX < 0) {
+          cardEl.classList.add('swiping-left');
+          cardEl.classList.remove('swiping-right');
+        } else {
+          cardEl.classList.add('swiping-right');
+          cardEl.classList.remove('swiping-left');
+        }
+      }
+    }, { passive: false });
+
+    cardScene.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      cardEl.classList.remove('swiping-left', 'swiping-right');
+      isSwiping = false;
+
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+
+      if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0) {
+          nextFlashcard();
+        } else {
+          prevFlashcard();
+        }
+      }
+    }, { passive: true });
+
+    // Global keyboard listener (Space, Arrows, Enter, Digits, 'S' for star)
+    window.addEventListener('keydown', (e) => {
+      if (['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) return;
+
+      if (activeTabIndex === 'kartochkalar') {
+        const sumArea = document.getElementById('flashcardSummaryArea');
+        const isSumVisible = sumArea && sumArea.style.display !== 'none';
+        if (isSumVisible) {
+          if (e.code === 'Enter' || e.code === 'Space') {
+            e.preventDefault();
+            currentCardIndex = 0;
+            renderFlashcard();
+          } else if (e.code === 'ArrowLeft') {
+            e.preventDefault();
+            renderFlashcard();
+          }
+          return;
+        }
+
+        if (e.code === 'Space') {
+          e.preventDefault();
+          toggleFlip();
+        } else if (e.code === 'ArrowRight') {
+          e.preventDefault();
+          nextFlashcard();
+        } else if (e.code === 'ArrowLeft') {
+          e.preventDefault();
+          prevFlashcard();
+        } else if (e.code === 'KeyS') {
+          e.preventDefault();
+          if (activeDeck[currentCardIndex]) toggleStarWord(activeDeck[currentCardIndex].word);
+        }
+      } else if (activeTabIndex === 'test-learn') {
+        if (e.code === 'Enter' || e.code === 'NumpadEnter') {
+          e.preventDefault();
+          if (quizSummaryArea.style.display !== 'none') {
+            initQuiz();
+          } else if (quizNextBtn.style.display !== 'none') {
+            quizNextBtn.click();
+          }
+        } else if (quizNextBtn.style.display === 'none') {
+          const keyMap = {
+            'Digit1': 0, 'Numpad1': 0,
+            'Digit2': 1, 'Numpad2': 1,
+            'Digit3': 2, 'Numpad3': 2,
+            'Digit4': 3, 'Numpad4': 3
+          };
+          if (keyMap[e.code] !== undefined) {
+            const btns = quizOptionsContainer.querySelectorAll('.quiz-opt-btn');
+            if (btns[keyMap[e.code]] && !btns[keyMap[e.code]].disabled) {
+              e.preventDefault();
+              btns[keyMap[e.code]].click();
+            }
+          }
+        }
+      }
+    });
+
+    /* ====================================================
+       2. TEST / LEARN LOGIC
+       ==================================================== */
+    let quizQuestions = [];
+    let quizIndex = 0;
+    let quizCorrectCount = 0;
+    let quizWrongCount = 0;
+
+    const quizCurrentNumEl = document.getElementById('quizCurrentNum');
+    const quizTotalNumEl = document.getElementById('quizTotalNum');
+    const quizScoreCorrectEl = document.getElementById('quizScoreCorrect');
+    const quizScoreWrongEl = document.getElementById('quizScoreWrong');
+    const quizProgressBar = document.getElementById('quizProgressBar');
+    const quizQuestionText = document.getElementById('quizQuestionText');
+    const quizOptionsContainer = document.getElementById('quizOptionsContainer');
+    const quizFeedback = document.getElementById('quizFeedback');
+    const quizNextBtn = document.getElementById('quizNextBtn');
+    const quizActiveArea = document.getElementById('quizActiveArea');
+    const quizSummaryArea = document.getElementById('quizSummaryArea');
+    const quizSummaryText = document.getElementById('quizSummaryText');
+    const quizRestartBtn = document.getElementById('quizRestartBtn');
+
+    function initQuiz() {
+      const sourceData = isStarredOnly && starredWords.size > 0 
+        ? rawData.filter(item => starredWords.has(item.word))
+        : rawData;
+
+      if (sourceData.length < 2) {
+        quizQuestionText.textContent = "Test rejimini boshlash uchun kamida 2 ta so'z kerak.";
+        quizOptionsContainer.innerHTML = '';
+        return;
+      }
+
+      quizQuestions = [...sourceData].sort(() => Math.random() - 0.5);
+      quizIndex = 0;
+      quizCorrectCount = 0;
+      quizWrongCount = 0;
+      quizTotalNumEl.textContent = quizQuestions.length;
+      quizScoreCorrectEl.textContent = '0';
+      quizScoreWrongEl.textContent = '0';
+
+      quizActiveArea.style.display = 'block';
+      quizSummaryArea.style.display = 'none';
+      renderQuizQuestion();
+    }
+
+    function renderQuizQuestion() {
+      const q = quizQuestions[quizIndex];
+      quizCurrentNumEl.textContent = quizIndex + 1;
+      quizProgressBar.style.width = `${((quizIndex + 1) / quizQuestions.length) * 100}%`;
+      quizFeedback.innerHTML = '';
+      quizFeedback.className = 'quiz-feedback';
+      quizNextBtn.style.display = 'none';
+
+      quizQuestionText.textContent = q.definition || q.word;
+
+      const distractors = rawData
+        .filter(item => item.word !== q.word)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
+      
+      const options = [q, ...distractors].sort(() => Math.random() - 0.5);
+
+      quizOptionsContainer.innerHTML = '';
+      options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-opt-btn';
+        btn.textContent = opt.word;
+        btn.addEventListener('click', () => checkQuizAnswer(btn, opt.word, q.word));
+        quizOptionsContainer.appendChild(btn);
+      });
+    }
+
+    function checkQuizAnswer(selectedBtn, selectedWord, correctWord) {
+      const allBtns = quizOptionsContainer.querySelectorAll('.quiz-opt-btn');
+      allBtns.forEach(b => b.disabled = true);
+
+      if (selectedWord === correctWord) {
+        selectedBtn.classList.add('correct');
+        soundCorrect();
+        quizFeedback.innerHTML = `To‘g‘ri javob! <i data-lucide="party-popper"></i>`;
+        quizFeedback.className = 'quiz-feedback success';
+        quizCorrectCount++;
+        quizScoreCorrectEl.textContent = quizCorrectCount;
+      } else {
+        selectedBtn.classList.add('wrong');
+        soundWrong();
+        allBtns.forEach(b => {
+          if (b.textContent === correctWord) b.classList.add('correct');
+        });
+        quizFeedback.innerHTML = `Noto‘g‘ri. To‘g‘ri javob: "${correctWord}"`;
+        quizFeedback.className = 'quiz-feedback error';
+        quizWrongCount++;
+        quizScoreWrongEl.textContent = quizWrongCount;
+      }
+
+      quizNextBtn.style.display = 'inline-flex';
+      quizNextBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    quizNextBtn.addEventListener('click', () => {
+      quizIndex++;
+      if (quizIndex < quizQuestions.length) {
+        renderQuizQuestion();
+      } else {
+        showQuizSummary();
+      }
+    });
+
+    function showQuizSummary() {
+      quizActiveArea.style.display = 'none';
+      quizSummaryArea.style.display = 'block';
+      const percentage = Math.round((quizCorrectCount / quizQuestions.length) * 100);
+      quizSummaryText.innerHTML = `Siz jami <strong>${quizQuestions.length}</strong> ta savoldan <strong>${quizCorrectCount}</strong> tasiga to'g'ri javob berdingiz (${percentage}% aniqlik).`;
+    }
+
+    quizRestartBtn.addEventListener('click', initQuiz);
+
+    /* ====================================================
+       3. MATCH GAME LOGIC
+       ==================================================== */
+    let firstSelected = null;
+    let secondSelected = null;
+    let matchesFound = 0;
+    let TOTAL_MATCH_PAIRS = 6;
+    let matchTimerInterval = null;
+    let matchStartTime = 0;
+
+    const matchGrid = document.getElementById('matchGrid');
+    const matchPairsLeftEl = document.getElementById('matchPairsLeft');
+    const timerTextEl = document.getElementById('timerText');
+    const matchVictoryEl = document.getElementById('matchVictory');
+    const victoryTimeMsgEl = document.getElementById('victoryTimeMsg');
+    const matchRestartBtn = document.getElementById('matchRestartBtn');
+    const matchPlayAgainBtn = document.getElementById('matchPlayAgainBtn');
+
+    function startMatchGame() {
+      clearInterval(matchTimerInterval);
+      matchVictoryEl.style.display = 'none';
+      matchGrid.style.display = 'grid';
+      matchesFound = 0;
+      firstSelected = null;
+      secondSelected = null;
+
+      const sourceData = isStarredOnly && starredWords.size >= 4
+        ? rawData.filter(item => starredWords.has(item.word))
+        : rawData;
+
+      TOTAL_MATCH_PAIRS = Math.min(6, sourceData.length);
+      matchPairsLeftEl.textContent = TOTAL_MATCH_PAIRS;
+
+      const selectedItems = [...sourceData].sort(() => Math.random() - 0.5).slice(0, TOTAL_MATCH_PAIRS);
+
+      const tiles = [];
+      selectedItems.forEach((item, idx) => {
+        tiles.push({ id: idx, type: 'word', text: item.word });
+        tiles.push({ id: idx, type: 'def', text: item.definition || item.word });
+      });
+
+      tiles.sort(() => Math.random() - 0.5);
+
+      matchGrid.innerHTML = '';
+      tiles.forEach(tile => {
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'match-tile';
+        cardDiv.textContent = tile.text;
+        cardDiv.dataset.pairId = tile.id;
+        cardDiv.addEventListener('click', () => handleMatchClick(cardDiv));
+        matchGrid.appendChild(cardDiv);
+      });
+
+      matchStartTime = Date.now();
+      matchTimerInterval = setInterval(() => {
+        const elapsed = (Date.now() - matchStartTime) / 1000;
+        const mins = Math.floor(elapsed / 60).toString().padStart(2, '0');
+        const secsVal = elapsed % 60;
+        const sInt = Math.floor(secsVal).toString().padStart(2, '0');
+        const sDec = Math.floor((secsVal % 1) * 10);
+        timerTextEl.textContent = `${mins}:${sInt}.${sDec}`;
+      }, 100);
+    }
+
+    function handleMatchClick(tile) {
+      if (tile.classList.contains('matched') || tile === firstSelected) return;
+
+      if (!firstSelected) {
+        firstSelected = tile;
+        tile.classList.add('selected');
+      } else if (!secondSelected) {
+        secondSelected = tile;
+        tile.classList.add('selected');
+
+        if (firstSelected.dataset.pairId === secondSelected.dataset.pairId) {
+          soundMatch();
+          setTimeout(() => {
+            firstSelected.classList.add('matched');
+            secondSelected.classList.add('matched');
+            firstSelected = null;
+            secondSelected = null;
+            matchesFound++;
+            matchPairsLeftEl.textContent = TOTAL_MATCH_PAIRS - matchesFound;
+
+            if (matchesFound === TOTAL_MATCH_PAIRS) {
+              clearInterval(matchTimerInterval);
+              soundCorrect();
+              setTimeout(() => {
+                matchGrid.style.display = 'none';
+                matchVictoryEl.style.display = 'flex';
+                victoryTimeMsgEl.textContent = `Barcha ${TOTAL_MATCH_PAIRS} ta juftlikni ${timerTextEl.textContent} soniyada topdingiz!`;
+              }, 350);
+            }
+          }, 300);
+        } else {
+          soundWrong();
+          firstSelected.classList.add('error');
+          secondSelected.classList.add('error');
+          setTimeout(() => {
+            firstSelected.classList.remove('selected', 'error');
+            secondSelected.classList.remove('selected', 'error');
+            firstSelected = null;
+            secondSelected = null;
+          }, 500);
+        }
+      }
+    }
+
+    matchRestartBtn.addEventListener('click', startMatchGame);
+    matchPlayAgainBtn.addEventListener('click', startMatchGame);
+
+    /* ====================================================
+       4. LUG‘AT LOGIC & EXPORT / COPY
+       ==================================================== */
+    const dictList = document.getElementById('dictList');
+    const dictSearchInput = document.getElementById('dictSearchInput');
+    const dictResultCount = document.getElementById('dictResultCount');
+    const copyAllWordsBtn = document.getElementById('copyAllWordsBtn');
+    const exportJsonBtn = document.getElementById('exportJsonBtn');
+
+    function renderDictionary(filter = '') {
+      dictList.innerHTML = '';
+      const q = filter.trim().toLowerCase();
+
+      const filtered = rawData.filter(item => {
+        const synText = formatSynonyms(item).toLowerCase();
+        return item.word.toLowerCase().includes(q) ||
+               synText.includes(q) ||
+               item.definition.toLowerCase().includes(q);
+      });
+
+      dictResultCount.textContent = `${filtered.length} ta so'z`;
+
+      filtered.forEach(item => {
+        const synText = formatSynonyms(item);
+        const isStarred = starredWords.has(item.word);
+        const row = document.createElement('div');
+        row.className = 'dict-item';
+        row.innerHTML = `
+          <div class="dict-item-content">
+            <div class="dict-item-header">
+              <span class="dict-word">${item.word}</span>
+              ${synText ? `<span class="dict-synonym">Sinonim: ${synText}</span>` : ''}
+            </div>
+            <p class="dict-definition">${item.definition}</p>
+          </div>
+          <div class="dict-row-actions">
+            <button class="icon-action-btn star-btn ${isStarred ? 'is-starred' : ''}" title="Yulduzcha" aria-label="Yulduzcha">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="${isStarred ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </button>
+            <button class="icon-action-btn speech-btn" title="Talaffuz qilish" aria-label="Talaffuz qilish">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </button>
+          </div>
+        `;
+
+        row.querySelector('.star-btn').addEventListener('click', () => {
+          toggleStarWord(item.word);
+        });
+
+        row.querySelector('.speech-btn').addEventListener('click', () => {
+          speakText(item.word);
+        });
+
+        dictList.appendChild(row);
+      });
+    }
+
+    dictSearchInput.addEventListener('input', (e) => {
+      renderDictionary(e.target.value);
+    });
+
+    // Copy all words to clipboard
+    copyAllWordsBtn.addEventListener('click', () => {
+      const textToCopy = rawData.map((item, idx) => {
+        const syn = formatSynonyms(item);
+        return `${idx + 1}. ${item.word} ${syn ? `[syn: ${syn}]` : ''} - ${item.definition}`;
+      }).join('\n');
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showToast(`Barcha so'zlar nusxalandi! <i data-lucide="clipboard"></i>`);
+      }).catch(() => {
+        alert("Nusxalashda xatolik yuz berdi.");
+      });
+    });
+
+    // Export JSON file
+    exportJsonBtn.addEventListener('click', () => {
+      const jsonStr = JSON.stringify(rawData, null, 2);
+      const blob = new Blob([jsonStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", url);
+      downloadAnchor.setAttribute("download", `${currentSet.title.toLowerCase().replace(/\s+/g, '-')}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      URL.revokeObjectURL(url);
+      showToast(`JSON fayl yuklab olindi! <i data-lucide="save"></i>`);
+    });
+
+    
+    // Efficient manual icon refresh without infinite MutationObserver loop
+    
+    /* ====================================================
+       INSTANT ZERO-DEPENDENCY VECTOR ICONS (OFFLINE FIRST)
+       ==================================================== */
+    const LUCIDE_ICONS = {
+      "award": '<circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>',
+      "book-open": '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
+      "brain": '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v14"/>',
+      "clipboard": '<rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>',
+      "headphones": '<path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/>',
+      "maximize": '<path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>',
+      "moon": '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+      "party-popper": '<path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 12"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11v0c-.11.64-.7 1.08-1.35.98l-.75-.12a1.86 1.86 0 0 0-1.9 2.22l.14.73c.17.88-.41 1.73-1.3 1.85l-.57.08a1.44 1.44 0 0 0-1.22 1.66l.07.41c.14.86-.46 1.66-1.33 1.74l-.82.08"/>',
+      "pause": '<rect width="4" height="16" x="6" y="4"/><rect width="4" height="16" x="14" y="4"/>',
+      "play": '<polygon points="6 3 20 12 6 21 6 3"/>',
+      "plus": '<path d="M5 12h14"/><path d="M12 5v14"/>',
+      "refresh-cw": '<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',
+      "rotate-ccw": '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>',
+      "save": '<path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/>',
+      "shuffle": '<path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/>',
+      "sparkles": '<path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>',
+      "star": '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+      "sun": '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>',
+      "trash-2": '<path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>',
+      "upload": '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>',
+      "volume-2": '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>',
+      "volume-x": '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/>'
+    };
+
+    function refreshIcons() {
+      document.querySelectorAll('[data-lucide]').forEach(el => {
+        const name = el.getAttribute('data-lucide');
+        const paths = LUCIDE_ICONS[name];
+        if (paths) {
+          el.innerHTML = `<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-${name}" style="display:inline-block; vertical-align:-0.125em;">${paths}</svg>`;
+        }
+      });
+    }
+
+    // Initial setup
+    refreshIcons();
+    renderSetDropdown();
+    renderFlashcard();
+    renderDictionary();
+    refreshIcons();
+  
+</script>
+</body>
+</html>

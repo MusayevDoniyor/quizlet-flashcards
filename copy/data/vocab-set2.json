@@ -1,0 +1,698 @@
+[
+  {
+    "word": "assume",
+    "synonyms": [
+      "presume",
+      "suppose"
+    ],
+    "definition": "To accept something as true without question or proof."
+  },
+  {
+    "word": "genius",
+    "synonyms": [
+      "brilliance",
+      "intellect"
+    ],
+    "definition": "Exceptional intellectual or creative power or natural talent."
+  },
+  {
+    "word": "belief",
+    "synonyms": [
+      "faith",
+      "conviction"
+    ],
+    "definition": "An acceptance that a statement is true or that something exists."
+  },
+  {
+    "word": "reckon",
+    "synonyms": [
+      "consider",
+      "believe"
+    ],
+    "definition": "To believe, consider, or assume something to be true based on available facts."
+  },
+  {
+    "word": "speculate",
+    "synonyms": [
+      "hypothesize",
+      "conjecture"
+    ],
+    "definition": "To form a theory or opinion about a topic without firm evidence."
+  },
+  {
+    "word": "gather",
+    "synonyms": [
+      "deduce",
+      "infer"
+    ],
+    "definition": "To deduce or logically conclude information from available evidence."
+  },
+  {
+    "word": "hunch",
+    "synonyms": [
+      "intuition",
+      "instinct"
+    ],
+    "definition": "A feeling or intuition that something is true, based on instinct rather than facts."
+  },
+  {
+    "word": "estimate (verb)",
+    "synonyms": [
+      "approximate",
+      "gauge"
+    ],
+    "definition": "To roughly calculate or judge the value, number, or quantity of something."
+  },
+  {
+    "word": "estimate (noun)",
+    "synonyms": [
+      "approximation",
+      "forecast"
+    ],
+    "definition": "A rough calculation, judgment, or prediction of value, quantity, or cost."
+  },
+  {
+    "word": "foregone conclusion",
+    "synonyms": [
+      "inevitable result",
+      "certainty"
+    ],
+    "definition": "A result or outcome that was certain and obvious before it happened."
+  },
+  {
+    "word": "ideology",
+    "synonyms": [
+      "belief system",
+      "philosophy"
+    ],
+    "definition": "A structured system of ideas and ideals that shapes political or economic theory."
+  },
+  {
+    "word": "cynical",
+    "synonyms": [
+      "skeptical",
+      "distrustful"
+    ],
+    "definition": "Distrustful of human sincerity; believing people are motivated purely by self-interest."
+  },
+  {
+    "word": "concept",
+    "synonyms": [
+      "notion",
+      "idea"
+    ],
+    "definition": "An abstract idea or a general notion representing something."
+  },
+  {
+    "word": "doubtful",
+    "synonyms": [
+      "dubious",
+      "uncertain"
+    ],
+    "definition": "Feeling uncertainty about something; not to be relied upon with certainty."
+  },
+  {
+    "word": "deliberate",
+    "synonyms": [
+      "intentional",
+      "considered"
+    ],
+    "definition": "Done consciously, carefully, and intentionally rather than by chance."
+  },
+  {
+    "word": "express a belief",
+    "synonyms": [
+      "assert",
+      "state an opinion"
+    ],
+    "definition": "To clearly declare or articulate a personal conviction or principle."
+  },
+  {
+    "word": "conclude",
+    "synonyms": [
+      "deduce",
+      "determine"
+    ],
+    "definition": "To arrive at a final judgment or opinion through reasoning."
+  },
+  {
+    "word": "dilemma",
+    "synonyms": [
+      "predicament",
+      "quandary"
+    ],
+    "definition": "A situation requiring a difficult choice between two or more undesirable alternatives."
+  },
+  {
+    "word": "concentrate",
+    "synonyms": [
+      "focus",
+      "pay attention"
+    ],
+    "definition": "To direct one's full attention and mental effort on a particular activity."
+  },
+  {
+    "word": "ponder",
+    "synonyms": [
+      "contemplate",
+      "reflect"
+    ],
+    "definition": "To think about something deeply and carefully, especially before making a decision."
+  },
+  {
+    "word": "account for",
+    "synonyms": [
+      "explain",
+      "justify"
+    ],
+    "definition": "To provide a satisfactory explanation, reason, or cause for something."
+  },
+  {
+    "word": "reach a conclusion",
+    "synonyms": [
+      "make a deduction",
+      "decide"
+    ],
+    "definition": "To arrive at a final decision or verdict after considering all available facts."
+  },
+  {
+    "word": "elaborate",
+    "synonyms": [
+      "expand",
+      "detail"
+    ],
+    "definition": "To develop or present an idea, theory, or explanation in further detail."
+  },
+  {
+    "word": "baffled",
+    "synonyms": [
+      "disoriented",
+      "mystified"
+    ],
+    "definition": "Completely perplexed, confused, or unable to understand a situation."
+  },
+  {
+    "word": "optimistic",
+    "synonyms": [
+      "hopeful",
+      "positive"
+    ],
+    "definition": "Hopeful and confident about the future or the successful outcome of an event."
+  },
+  {
+    "word": "pessimistic",
+    "synonyms": [
+      "negative",
+      "defeatist"
+    ],
+    "definition": "Tending to see the worst aspect of things or believe the worst will happen."
+  },
+  {
+    "word": "basis",
+    "synonyms": [
+      "foundation",
+      "grounds"
+    ],
+    "definition": "The underlying foundation, support, or justification for an idea or system."
+  },
+  {
+    "word": "take into account",
+    "synonyms": [
+      "consider",
+      "factor in"
+    ],
+    "definition": "To actively consider particular facts or circumstances when making a decision."
+  },
+  {
+    "word": "intuition",
+    "synonyms": [
+      "instinct",
+      "gut feeling"
+    ],
+    "definition": "The ability to understand something immediately without the need for conscious reasoning."
+  },
+  {
+    "word": "justify",
+    "synonyms": [
+      "defend",
+      "vindicate"
+    ],
+    "definition": "To show or prove a decision, action, or claim to be right or reasonable."
+  },
+  {
+    "word": "underlying causes",
+    "synonyms": [
+      "root causes",
+      "foundational issues"
+    ],
+    "definition": "The fundamental, deep-seated reasons behind a problem or phenomenon."
+  },
+  {
+    "word": "criminal behaviour",
+    "synonyms": [
+      "unlawful conduct",
+      "illegal activity"
+    ],
+    "definition": "Actions and conduct that violate legal statutes and are punishable by law."
+  },
+  {
+    "word": "serious consequences",
+    "synonyms": [
+      "severe repercussions",
+      "grave results"
+    ],
+    "definition": "Substantial, severe negative outcomes resulting from an action or event."
+  },
+  {
+    "word": "repeat offenders",
+    "synonyms": [
+      "habitual offenders",
+      "recidivists"
+    ],
+    "definition": "Individuals who commit crimes repeatedly after having already been punished."
+  },
+  {
+    "word": "employment prospects",
+    "synonyms": [
+      "job prospects",
+      "career opportunities"
+    ],
+    "definition": "The likelihood and availability of securing productive work in the job market."
+  },
+  {
+    "word": "vocational training",
+    "synonyms": [
+      "occupational training",
+      "skills training"
+    ],
+    "definition": "Instruction designed to equip individuals with practical skills for a specific trade."
+  },
+  {
+    "word": "correctional system",
+    "synonyms": [
+      "penal system",
+      "prison system"
+    ],
+    "definition": "The government network responsible for the rehabilitation and custody of convicted offenders."
+  },
+  {
+    "word": "prison terms",
+    "synonyms": [
+      "custodial sentences",
+      "prison sentences"
+    ],
+    "definition": "The duration of time an offender is legally sentenced to spend incarcerated."
+  },
+  {
+    "word": "break the law",
+    "synonyms": [
+      "violate the law",
+      "commit an offence"
+    ],
+    "definition": "To engage in activity that disobeys established legal regulations."
+  },
+  {
+    "word": "address difficulties",
+    "synonyms": [
+      "tackle problems",
+      "resolve issues"
+    ],
+    "definition": "To actively confront, manage, and work toward resolving complex challenges."
+  },
+  {
+    "word": "deliver a message",
+    "synonyms": [
+      "convey a message",
+      "transmit an idea"
+    ],
+    "definition": "To clearly communicate information, a warning, or an idea to an audience."
+  },
+  {
+    "word": "impose punishment",
+    "synonyms": [
+      "administer punishment",
+      "penalize"
+    ],
+    "definition": "To officially enforce a legal penalty or sanction upon a wrongdoer."
+  },
+  {
+    "word": "reduce recidivism",
+    "synonyms": [
+      "reduce reoffending",
+      "lower repeat crime"
+    ],
+    "definition": "To lower the frequency with which former convicts commit subsequent crimes."
+  },
+  {
+    "word": "provide counselling",
+    "synonyms": [
+      "offer guidance",
+      "give therapy"
+    ],
+    "definition": "To give professional guidance, psychological advice, and emotional support."
+  },
+  {
+    "word": "prevent offending",
+    "synonyms": [
+      "prevent crime",
+      "deter unlawful acts"
+    ],
+    "definition": "To implement proactive measures that stop crimes before they occur."
+  },
+  {
+    "word": "ensure reintegration",
+    "synonyms": [
+      "facilitate reintegration",
+      "rehabilitate"
+    ],
+    "definition": "To assist individuals in successfully and lawfully rejoining society."
+  },
+  {
+    "word": "improve employability",
+    "synonyms": [
+      "enhance employability",
+      "boost job-readiness"
+    ],
+    "definition": "To augment an individual's qualifications, skills, and desirability to employers."
+  },
+  {
+    "word": "reflect the gravity",
+    "synonyms": [
+      "reflect the seriousness",
+      "show the severity"
+    ],
+    "definition": "To accurately represent the critical, severe importance of a situation."
+  },
+  {
+    "word": "commit crimes",
+    "synonyms": [
+      "perpetrate offences",
+      "break laws"
+    ],
+    "definition": "To perform unlawful or prohibited actions that constitute violations of the law."
+  },
+  {
+    "word": "create opportunities",
+    "synonyms": [
+      "provide opportunities",
+      "open doors"
+    ],
+    "definition": "To produce favorable circumstances and possibilities for people to advance."
+  },
+  {
+    "word": "status quo",
+    "synonyms": [
+      "current situation",
+      "existing state"
+    ],
+    "definition": "The existing state of affairs, especially regarding social, cultural, or political matters."
+  },
+  {
+    "word": "transform",
+    "synonyms": [
+      "change completely",
+      "metamorphose"
+    ],
+    "definition": "To undergo a marked, total change in form, appearance, or character."
+  },
+  {
+    "word": "dynamic",
+    "synonyms": [
+      "active",
+      "energetic"
+    ],
+    "definition": "Characterized by constant change, vigor, forward progress, and activity."
+  },
+  {
+    "word": "evolve",
+    "synonyms": [
+      "develop",
+      "progress"
+    ],
+    "definition": "To develop gradually over time into a more mature, effective, or complex form."
+  },
+  {
+    "word": "remain",
+    "synonyms": [
+      "stay",
+      "continue"
+    ],
+    "definition": "To continue in the same state, condition, or place without change."
+  },
+  {
+    "word": "shift (noun)",
+    "synonyms": [
+      "change",
+      "movement"
+    ],
+    "definition": "A slight or notable alteration in position, direction, emphasis, or attitude."
+  },
+  {
+    "word": "adapt",
+    "synonyms": [
+      "adjust",
+      "acclimate"
+    ],
+    "definition": "To adjust oneself or something readily to fit new conditions or environments."
+  },
+  {
+    "word": "switch (verb)",
+    "synonyms": [
+      "exchange",
+      "swap"
+    ],
+    "definition": "To replace or change one object, method, or setting for another."
+  },
+  {
+    "word": "substitute (noun)",
+    "synonyms": [
+      "replacement",
+      "stand-in"
+    ],
+    "definition": "A person or thing acting, serving, or taking the place of another."
+  },
+  {
+    "word": "tell the difference",
+    "synonyms": [
+      "distinguish",
+      "differentiate"
+    ],
+    "definition": "To perceive or recognize what makes entities distinct from one another."
+  },
+  {
+    "word": "in other words",
+    "synonyms": [
+      "to put it differently",
+      "that is to say"
+    ],
+    "definition": "Phrased in a different, clearer, or more accessible manner."
+  },
+  {
+    "word": "modify",
+    "synonyms": [
+      "alter",
+      "amend"
+    ],
+    "definition": "To make minor or partial changes to something, usually to improve its function."
+  },
+  {
+    "word": "adjust",
+    "synonyms": [
+      "fine-tune",
+      "adapt"
+    ],
+    "definition": "To alter something slightly in order to achieve accuracy or a desired balance."
+  },
+  {
+    "word": "maintain",
+    "synonyms": [
+      "preserve",
+      "sustain"
+    ],
+    "definition": "To cause or enable a condition, standard, or situation to continue intact."
+  },
+  {
+    "word": "refine",
+    "synonyms": [
+      "polish",
+      "perfect"
+    ],
+    "definition": "To improve something by making subtle, precise changes and corrections."
+  },
+  {
+    "word": "revise",
+    "synonyms": [
+      "edit",
+      "update"
+    ],
+    "definition": "To review, edit, and re-examine material in order to improve or correct it."
+  },
+  {
+    "word": "alternative",
+    "synonyms": [
+      "choice",
+      "option"
+    ],
+    "definition": "One of two or more available possibilities, routes, or courses of action."
+  },
+  {
+    "word": "alternate (verb)",
+    "synonyms": [
+      "rotate",
+      "take turns"
+    ],
+    "definition": "To occur or proceed successively, one after the other, in repeating turns."
+  },
+  {
+    "word": "reform (noun)",
+    "synonyms": [
+      "improvement",
+      "restructuring"
+    ],
+    "definition": "The improvement or amendment of what is erroneous, corrupt, or unsatisfactory."
+  },
+  {
+    "word": "innovation",
+    "synonyms": [
+      "novelty",
+      "advancement"
+    ],
+    "definition": "A new method, idea, invention, or approach to achieving a goal."
+  },
+  {
+    "word": "revolution",
+    "synonyms": [
+      "transformation",
+      "breakthrough"
+    ],
+    "definition": "A fundamental, dramatic, and widespread transformation in human society or technology."
+  },
+  {
+    "word": "conservative",
+    "synonyms": [
+      "traditional",
+      "cautious"
+    ],
+    "definition": "Holding traditional values and showing caution toward sudden or rapid changes."
+  },
+  {
+    "word": "amend",
+    "synonyms": [
+      "revise",
+      "modify"
+    ],
+    "definition": "To make formal changes to a law, constitution, or text in order to improve it."
+  },
+  {
+    "word": "deteriorate",
+    "synonyms": [
+      "decline",
+      "worsen"
+    ],
+    "definition": "To progressively become worse in quality, health, condition, or performance."
+  },
+  {
+    "word": "decay",
+    "synonyms": [
+      "decompose",
+      "deteriorate"
+    ],
+    "definition": "To decline slowly in quality, power, or vigor; to decompose organically."
+  },
+  {
+    "word": "distort",
+    "synonyms": [
+      "misrepresent",
+      "warp"
+    ],
+    "definition": "To twist out of natural shape or give a misleading, false representation of facts."
+  },
+  {
+    "word": "speak your mind",
+    "synonyms": [
+      "express yourself honestly",
+      "be candid"
+    ],
+    "definition": "To state your thoughts and opinions candidly, openly, and directly."
+  },
+  {
+    "word": "express an opinion",
+    "synonyms": [
+      "voice a view",
+      "share thoughts"
+    ],
+    "definition": "To articulate and make known one's beliefs on a specific issue."
+  },
+  {
+    "word": "talk down to",
+    "synonyms": [
+      "patronize",
+      "condescend to"
+    ],
+    "definition": "To address someone condescendingly, implying they are intellectually inferior."
+  },
+  {
+    "word": "have your say",
+    "synonyms": [
+      "voice your opinion",
+      "participate"
+    ],
+    "definition": "To have the opportunity to state your view before a collective decision is made."
+  },
+  {
+    "word": "talk over",
+    "synonyms": [
+      "discuss",
+      "confer about"
+    ],
+    "definition": "To confer and discuss a matter or concern in depth with others."
+  },
+  {
+    "word": "talk through",
+    "synonyms": [
+      "walk through",
+      "explain step-by-step"
+    ],
+    "definition": "To discuss every stage of a process or problem thoroughly from start to finish."
+  },
+  {
+    "word": "potential (noun)",
+    "synonyms": [
+      "capacity",
+      "promise"
+    ],
+    "definition": "Latent qualities or abilities that can be developed into future success."
+  },
+  {
+    "word": "innovative",
+    "synonyms": [
+      "original",
+      "groundbreaking"
+    ],
+    "definition": "Introducing new, creative, and pioneering ideas or methods."
+  },
+  {
+    "word": "progress",
+    "synonyms": [
+      "advancement",
+      "development"
+    ],
+    "definition": "Forward movement toward a higher, improved state or destination."
+  },
+  {
+    "word": "sustain",
+    "synonyms": [
+      "maintain",
+      "uphold"
+    ],
+    "definition": "To nourish, support, or keep an activity or relationship going over time."
+  },
+  {
+    "word": "endure",
+    "synonyms": [
+      "persist",
+      "withstand"
+    ],
+    "definition": "To withstand hardship, pain, or adversity patiently and continue to exist."
+  }
+]

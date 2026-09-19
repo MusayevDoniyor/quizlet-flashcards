@@ -1,0 +1,800 @@
+[
+  {
+    "word": "radical",
+    "synonyms": [
+      "fundamental",
+      "drastic",
+      "revolutionary"
+    ],
+    "definition": "Relating to or affecting the fundamental nature of something; far-reaching — tub, keskin, katta o'zgarish keltiruvchi"
+  },
+  {
+    "word": "convert",
+    "synonyms": [
+      "transform",
+      "change",
+      "adapt"
+    ],
+    "definition": "To change or cause to change in form, character, or function — aylantirmoq, o'zgartirmoq"
+  },
+  {
+    "word": "alternative",
+    "synonyms": [
+      "option",
+      "choice",
+      "substitute"
+    ],
+    "definition": "Available as another possibility or choice — muqobil, boshqa variant"
+  },
+  {
+    "word": "modify",
+    "synonyms": [
+      "alter",
+      "adjust",
+      "adapt"
+    ],
+    "definition": "To make partial or minor changes to something to improve it — o'zgartirmoq, qisman moslashtirmoq"
+  },
+  {
+    "word": "influence",
+    "synonyms": [
+      "impact",
+      "sway",
+      "effect"
+    ],
+    "definition": "The capacity to have an effect on the character or behavior of someone — ta'sir"
+  },
+  {
+    "word": "affect",
+    "synonyms": [
+      "influence",
+      "impact",
+      "alter"
+    ],
+    "definition": "To have an effect on; make a difference to — ta'sir qilmoq"
+  },
+  {
+    "word": "last",
+    "synonyms": [
+      "continue",
+      "endure",
+      "persist"
+    ],
+    "definition": "To continue for a specified period of time — davom etmoq"
+  },
+  {
+    "word": "mature",
+    "synonyms": [
+      "develop",
+      "ripen",
+      "adult",
+      "grown"
+    ],
+    "definition": "Fully developed physically or mentally (adj); to reach full growth or development (v) — yetuk, voyaga yetgan / yetilmoq"
+  },
+  {
+    "word": "steady",
+    "synonyms": [
+      "stable",
+      "constant",
+      "stabilize"
+    ],
+    "definition": "Firmly fixed, supported, or balanced; to make or become steady — barqaror, bir maromdagi / barqarorlashtirmoq"
+  },
+  {
+    "word": "potential",
+    "synonyms": [
+      "possibility",
+      "capability",
+      "prospective"
+    ],
+    "definition": "Having the capacity to develop into something in the future; latent qualities — salohiyat, imkoniyat / ehtimoliy"
+  },
+  {
+    "word": "deteriorate",
+    "synonyms": [
+      "worsen",
+      "decline",
+      "degenerate"
+    ],
+    "definition": "To become progressively worse in quality or condition — yomonlashmoq"
+  },
+  {
+    "word": "decay",
+    "synonyms": [
+      "rot",
+      "decompose",
+      "deteriorate"
+    ],
+    "definition": "To rot or decompose through natural biological or chemical processes — chirimoq, yemirilmoq"
+  },
+  {
+    "word": "spoil",
+    "synonyms": [
+      "ruin",
+      "damage",
+      "decay"
+    ],
+    "definition": "To diminish or destroy the value or quality of something — buzilmoq; buzmoq"
+  },
+  {
+    "word": "persist",
+    "synonyms": [
+      "continue",
+      "endure",
+      "persevere"
+    ],
+    "definition": "To continue firmly or obstinately in a course of action — davom etmoq, saqlanib qolmoq"
+  },
+  {
+    "word": "shift",
+    "synonyms": [
+      "change",
+      "move",
+      "relocate",
+      "alteration"
+    ],
+    "definition": "A slight change in position, direction, or tendency; to move or change — o'zgarish, siljish / o'zgarmoq"
+  },
+  {
+    "word": "substitute",
+    "synonyms": [
+      "replace",
+      "exchange",
+      "swap"
+    ],
+    "definition": "To use or add in place of something else — o'rniga ishlatmoq, almashtirmoq"
+  },
+  {
+    "word": "make your voice heard",
+    "synonyms": [
+      "speak up",
+      "express your view",
+      "be heard"
+    ],
+    "definition": "To express opinions forcefully so people take notice — o'z fikrini boshqalarga yetkazmoq"
+  },
+  {
+    "word": "have a word with",
+    "synonyms": [
+      "talk to briefly",
+      "speak with",
+      "confer with"
+    ],
+    "definition": "To talk to someone briefly, usually in private — kim bilandir qisqacha gaplashmoq"
+  },
+  {
+    "word": "speak volumes",
+    "synonyms": [
+      "be very revealing",
+      "convey a lot",
+      "say it all"
+    ],
+    "definition": "To convey a great deal of information without words — ko'p narsani anglatmoq"
+  },
+  {
+    "word": "hold an opinion",
+    "synonyms": [
+      "maintain a view",
+      "believe",
+      "reckon"
+    ],
+    "definition": "To have a specific belief or perspective on a matter — ma'lum bir fikrga ega bo'lmoq"
+  },
+  {
+    "word": "heated argument",
+    "synonyms": [
+      "intense dispute",
+      "fierce debate"
+    ],
+    "definition": "An impassioned, angry, or contentious discussion — qizg'in bahs, jiddiy tortishuv"
+  },
+  {
+    "word": "win an argument",
+    "synonyms": [
+      "prove your point",
+      "prevail in debate"
+    ],
+    "definition": "To successfully persuade others or prevail in a debate — bahsda ustun kelmoq"
+  },
+  {
+    "word": "raise your voice",
+    "synonyms": [
+      "speak louder",
+      "shout"
+    ],
+    "definition": "To speak more loudly or angrily than usual — ovozini ko'tarmoq"
+  },
+  {
+    "word": "settle an argument",
+    "synonyms": [
+      "resolve a dispute",
+      "reach agreement"
+    ],
+    "definition": "To resolve a disagreement or conflict definitively — bahsni hal qilmoq"
+  },
+  {
+    "word": "novel",
+    "synonyms": [
+      "original",
+      "innovative",
+      "unconventional"
+    ],
+    "definition": "Interestingly new or unusual; not seen before — yangi, noodatiy, o'ziga xos"
+  },
+  {
+    "word": "sustain",
+    "synonyms": [
+      "maintain",
+      "uphold",
+      "preserve"
+    ],
+    "definition": "To strengthen or support physically, mentally, or financially — davom ettirmoq, saqlab turmoq"
+  },
+  {
+    "word": "talk somebody into",
+    "synonyms": [
+      "persuade",
+      "convince",
+      "encourage"
+    ],
+    "definition": "To persuade someone to do something through reasoning — kimnidir biror ish qilishga ko'ndirmoq"
+  },
+  {
+    "word": "talk somebody out of",
+    "synonyms": [
+      "dissuade",
+      "discourage",
+      "deter"
+    ],
+    "definition": "To persuade someone not to undertake a particular action — kimnidir biror ishni qilmaslikka ko'ndirmoq"
+  },
+  {
+    "word": "to say the least",
+    "synonyms": [
+      "at minimum",
+      "to put it mildly"
+    ],
+    "definition": "Used to indicate that a statement understates the true reality — kamida shuni aytish mumkinki"
+  },
+  {
+    "word": "trend",
+    "synonyms": [
+      "tendency",
+      "movement",
+      "pattern"
+    ],
+    "definition": "A general direction in which something is developing or changing — tendensiya, umumiy o'zgarish yo'nalishi"
+  },
+  {
+    "word": "in a word",
+    "synonyms": [
+      "briefly",
+      "in short",
+      "in summary"
+    ],
+    "definition": "To summarize a situation in a single concise thought — qisqasi, bir so'z bilan aytganda"
+  },
+  {
+    "word": "public accountability",
+    "synonyms": [
+      "public responsibility",
+      "transparency"
+    ],
+    "definition": "The obligation of public officials to explain and justify their decisions — jamoatchilik oldidagi javobgarlik"
+  },
+  {
+    "word": "social division",
+    "synonyms": [
+      "social fragmentation",
+      "polarisation"
+    ],
+    "definition": "Disagreement, segregation, or inequality dividing society into factions — ijtimoiy bo'linish"
+  },
+  {
+    "word": "investigative reporting",
+    "synonyms": [
+      "investigative journalism",
+      "in-depth reporting"
+    ],
+    "definition": "Journalism where reporters deeply investigate a single topic of public interest — jurnalistik surishtiruv"
+  },
+  {
+    "word": "public scrutiny",
+    "synonyms": [
+      "public examination",
+      "close inspection"
+    ],
+    "definition": "Critical observation, examination, or surveillance by the public or media — jamoatchilik nazorati"
+  },
+  {
+    "word": "free press",
+    "synonyms": [
+      "independent press",
+      "fourth estate"
+    ],
+    "definition": "A media system not subject to government censorship or control — erkin matbuot"
+  },
+  {
+    "word": "sensational headlines",
+    "synonyms": [
+      "exaggerated headlines",
+      "clickbait"
+    ],
+    "definition": "Headlines formulated to shock or arouse strong excitement rather than inform — shov-shuvli sarlavhalar"
+  },
+  {
+    "word": "algorithmic amplification",
+    "synonyms": [
+      "automated amplification",
+      "social algorithmic reach"
+    ],
+    "definition": "The process by which software algorithms increase the reach and visibility of certain content — algoritmlar orqali kontent tarqalishining kuchaytirilishi"
+  },
+  {
+    "word": "echo chambers",
+    "synonyms": [
+      "closed information circles",
+      "filter bubbles"
+    ],
+    "definition": "Environments where people only encounter information reflecting their existing opinions — bir xil fikrlar doirasi"
+  },
+  {
+    "word": "media literacy",
+    "synonyms": [
+      "media awareness",
+      "critical media consumption"
+    ],
+    "definition": "The ability to critically access, analyze, evaluate, and create media — media savodxonligi"
+  },
+  {
+    "word": "political polarisation",
+    "synonyms": [
+      "political division",
+      "partisan divide"
+    ],
+    "definition": "The divergence of political attitudes away from the center towards extremes — siyosiy qutblanish"
+  },
+  {
+    "word": "editorial standards",
+    "synonyms": [
+      "journalistic standards",
+      "ethical guidelines"
+    ],
+    "definition": "Ethical and professional guidelines governing journalistic publications — tahririyat standartlari"
+  },
+  {
+    "word": "spread misinformation",
+    "synonyms": [
+      "circulate false information",
+      "disseminate falsehoods"
+    ],
+    "definition": "To circulate incorrect, inaccurate, or deceptive information — yolg'on ma'lumot tarqatmoq"
+  },
+  {
+    "word": "distort public debate",
+    "synonyms": [
+      "misrepresent public debate",
+      "skew discussion"
+    ],
+    "definition": "To twist or misrepresent public discussion to manipulate opinions — jamoatchilik muhokamasini noto'g'ri yo'naltirmoq"
+  },
+  {
+    "word": "expose corruption",
+    "synonyms": [
+      "uncover corruption",
+      "reveal graft"
+    ],
+    "definition": "To publicly reveal illegal or dishonest behavior in power — korrupsiyani fosh etmoq"
+  },
+  {
+    "word": "challenge institutions",
+    "synonyms": [
+      "question institutions",
+      "contest authority"
+    ],
+    "definition": "To question or oppose established governmental or corporate organizations — tashkilotlar faoliyatini shubha ostiga qo'ymoq"
+  },
+  {
+    "word": "reveal misconduct",
+    "synonyms": [
+      "expose wrongdoing",
+      "uncover malpractice"
+    ],
+    "definition": "To uncover and make known unacceptable or improper behavior — noqonuniy yoki nomaqbul xatti-harakatlarni fosh etmoq"
+  },
+  {
+    "word": "draw attention",
+    "synonyms": [
+      "attract attention",
+      "highlight"
+    ],
+    "definition": "To make someone notice or focus on something important — e'tiborni jalb qilmoq"
+  },
+  {
+    "word": "uncover links",
+    "synonyms": [
+      "reveal connections",
+      "expose ties"
+    ],
+    "definition": "To discover hidden connections or relationships between entities — aloqalarni aniqlamoq"
+  },
+  {
+    "word": "evaluate sources",
+    "synonyms": [
+      "assess sources",
+      "verify information"
+    ],
+    "definition": "To critically appraise the credibility and accuracy of information origins — manbalarni baholamoq"
+  },
+  {
+    "word": "confirm beliefs",
+    "synonyms": [
+      "reinforce beliefs",
+      "validate views"
+    ],
+    "definition": "To substantiate or validate opinions already held — mavjud qarashlarni tasdiqlamoq"
+  },
+  {
+    "word": "promotion",
+    "synonyms": [
+      "advancement",
+      "elevation",
+      "upgrade"
+    ],
+    "definition": "The act of raising someone to a higher position or rank — lavozim ko'tarilishi"
+  },
+  {
+    "word": "contemporary",
+    "synonyms": [
+      "modern",
+      "current",
+      "present-day"
+    ],
+    "definition": "Living, occurring, or belonging to the present time — zamonaviy, hozirgi davrga oid"
+  },
+  {
+    "word": "obsolete",
+    "synonyms": [
+      "outdated",
+      "archaic",
+      "antiquated"
+    ],
+    "definition": "No longer produced or used; out of date — eskirgan, endi ishlatilmaydigan"
+  },
+  {
+    "word": "decade",
+    "synonyms": [
+      "ten years",
+      "decennium"
+    ],
+    "definition": "A period of ten continuous years — o'n yillik"
+  },
+  {
+    "word": "instantaneous",
+    "synonyms": [
+      "immediate",
+      "instant",
+      "prompt"
+    ],
+    "definition": "Occurring or done in an instant without perceptible delay — bir zumda sodir bo'ladigan"
+  },
+  {
+    "word": "span",
+    "synonyms": [
+      "period",
+      "duration",
+      "interval"
+    ],
+    "definition": "The full extent, length, or duration of something — vaqt oralig'i, davomiylik"
+  },
+  {
+    "word": "private sector",
+    "synonyms": [
+      "commercial businesses",
+      "free enterprise"
+    ],
+    "definition": "The part of the national economy not under direct state control — xususiy sektor"
+  },
+  {
+    "word": "public sector",
+    "synonyms": [
+      "government organisations",
+      "state services"
+    ],
+    "definition": "The part of the economy concerned with providing basic government services — davlat sektori"
+  },
+  {
+    "word": "civil service",
+    "synonyms": [
+      "government administration",
+      "public administration"
+    ],
+    "definition": "The permanent administrative services of a government department — davlat xizmati"
+  },
+  {
+    "word": "long-standing",
+    "synonyms": [
+      "established",
+      "enduring",
+      "time-honored"
+    ],
+    "definition": "Having existed or continued for a long time — uzoq vaqtdan beri mavjud bo'lgan"
+  },
+  {
+    "word": "abrupt",
+    "synonyms": [
+      "sudden",
+      "unexpected",
+      "sharp"
+    ],
+    "definition": "Sudden, unexpected, and often unpleasantly brief — to'satdan, keskin"
+  },
+  {
+    "word": "financial difficulties",
+    "synonyms": [
+      "money problems",
+      "economic hardship"
+    ],
+    "definition": "Hardships or struggles arising from lack of adequate funds — moliyaviy qiyinchiliklar"
+  },
+  {
+    "word": "redundant",
+    "synonyms": [
+      "unemployed",
+      "laid off",
+      "surplus"
+    ],
+    "definition": "No longer needed for a job and dismissed because work has ceased — shtat qisqarishi sababli ishsiz qolgan"
+  },
+  {
+    "word": "cut back on",
+    "synonyms": [
+      "reduce",
+      "curtail",
+      "trim"
+    ],
+    "definition": "To reduce the amount or quantity of money, food, or resources spent — sarf-xarajatni kamaytirmoq"
+  },
+  {
+    "word": "make ends meet",
+    "synonyms": [
+      "manage financially",
+      "get by",
+      "survive"
+    ],
+    "definition": "To earn just enough money to pay for basic living necessities — daromadni xarajatlarga yetkazmoq"
+  },
+  {
+    "word": "cost of living",
+    "synonyms": [
+      "living expenses",
+      "subsistence cost"
+    ],
+    "definition": "The level of prices relating to a range of everyday items — yashash xarajatlari"
+  },
+  {
+    "word": "spell",
+    "synonyms": [
+      "period",
+      "stretch",
+      "bout"
+    ],
+    "definition": "A short or indefinite period of a particular activity or condition — ma'lum bir vaqt davri"
+  },
+  {
+    "word": "fall behind with",
+    "synonyms": [
+      "fail to keep up with",
+      "lag behind"
+    ],
+    "definition": "To fail to keep up pace with payments, schedules, or responsibilities — to'lov yoki ishni vaqtida qilolmay qolmoq"
+  },
+  {
+    "word": "run into debt",
+    "synonyms": [
+      "become indebted",
+      "accumulate debt"
+    ],
+    "definition": "To get into a situation where you owe large amounts of money — qarzga botmoq"
+  },
+  {
+    "word": "interim",
+    "synonyms": [
+      "temporary",
+      "provisional",
+      "transitional"
+    ],
+    "definition": "Arranged for the intervening period; provisional — vaqtinchalik, oraliq"
+  },
+  {
+    "word": "live within your means",
+    "synonyms": [
+      "spend responsibly",
+      "avoid excess debt"
+    ],
+    "definition": "To spend only what you can afford from your existing income — daromadiga yarasha yashamoq"
+  },
+  {
+    "word": "save money",
+    "synonyms": [
+      "put money aside",
+      "economize",
+      "deposit"
+    ],
+    "definition": "To set aside money instead of spending it immediately — pul tejamoq, jamg'armoq"
+  },
+  {
+    "word": "splash out on",
+    "synonyms": [
+      "spend extravagantly on",
+      "splurge on"
+    ],
+    "definition": "To spend money freely and lavishly on luxury purchases — biror narsaga ko'p pul sarflamoq"
+  },
+  {
+    "word": "economic crisis",
+    "synonyms": [
+      "financial emergency",
+      "recession",
+      "slump"
+    ],
+    "definition": "A severe period of economic downturn and stagnation — iqtisodiy inqiroz"
+  },
+  {
+    "word": "cut costs",
+    "synonyms": [
+      "reduce expenses",
+      "trim budget"
+    ],
+    "definition": "To implement measures to decrease operational expenditures — xarajatlarni kamaytirmoq"
+  },
+  {
+    "word": "do away with",
+    "synonyms": [
+      "eliminate",
+      "abolish",
+      "discard"
+    ],
+    "definition": "To put an end to something or get rid of it permanently — bekor qilmoq, yo'q qilmoq"
+  },
+  {
+    "word": "cut down on",
+    "synonyms": [
+      "reduce",
+      "decrease consumption"
+    ],
+    "definition": "To consume or use less of something — iste'mol yoki foydalanishni kamaytirmoq"
+  },
+  {
+    "word": "at a price",
+    "synonyms": [
+      "with a disadvantage",
+      "at great cost"
+    ],
+    "definition": "Achieved with an accompanying disadvantage or sacrifice — ma'lum bir zarar yoki qurbonlik evaziga"
+  },
+  {
+    "word": "recruit",
+    "synonyms": [
+      "employ",
+      "hire",
+      "onboard"
+    ],
+    "definition": "To enlist someone in an organization or workforce — ishga yollamoq"
+  },
+  {
+    "word": "headhunt",
+    "synonyms": [
+      "actively recruit",
+      "poach talent"
+    ],
+    "definition": "To identify and recruit promising personnel from other employers — malakali mutaxassisni boshqa joydan ishga jalb qilmoq"
+  },
+  {
+    "word": "prospects",
+    "synonyms": [
+      "possibilities",
+      "future chances",
+      "outlook"
+    ],
+    "definition": "Chances or opportunities for future success, especially in work — kelajakdagi imkoniyatlar, istiqbollar"
+  },
+  {
+    "word": "stint",
+    "synonyms": [
+      "period of work",
+      "turn",
+      "term"
+    ],
+    "definition": "A fixed or short period of time spent doing a particular job — biror ishda o'tkazilgan qisqa davr"
+  },
+  {
+    "word": "subsequent",
+    "synonyms": [
+      "following",
+      "succeeding",
+      "later"
+    ],
+    "definition": "Coming after something in time; following next — keyingi, undan keyin sodir bo'lgan"
+  },
+  {
+    "word": "fire",
+    "synonyms": [
+      "dismiss",
+      "terminate",
+      "sack"
+    ],
+    "definition": "To discharge an employee from their job — ishdan bo'shatmoq"
+  },
+  {
+    "word": "value for money",
+    "synonyms": [
+      "reasonable quality for the price",
+      "cost-effective"
+    ],
+    "definition": "Something well worth the money spent on it — sarflangan pulga arziydigan qiymat"
+  },
+  {
+    "word": "be of value",
+    "synonyms": [
+      "be useful",
+      "have worth",
+      "benefit"
+    ],
+    "definition": "To be useful, worthwhile, or advantageous — foydali, qimmatli bo'lmoq"
+  },
+  {
+    "word": "simultaneous",
+    "synonyms": [
+      "happening together",
+      "concurrent",
+      "synchronous"
+    ],
+    "definition": "Occurring, operating, or done at the exact same time — bir vaqtda sodir bo'ladigan"
+  },
+  {
+    "word": "raise money",
+    "synonyms": [
+      "collect funds",
+      "crowdfund",
+      "solicit donations"
+    ],
+    "definition": "To gather financial contributions for a specific cause or venture — pul yig'moq"
+  },
+  {
+    "word": "economic growth",
+    "synonyms": [
+      "economic expansion",
+      "GDP growth"
+    ],
+    "definition": "An increase in the production of economic goods and services — iqtisodiy o'sish"
+  },
+  {
+    "word": "duration",
+    "synonyms": [
+      "length of time",
+      "time span",
+      "extent"
+    ],
+    "definition": "The time during which something continues or exists — davomiylik, muddat"
+  },
+  {
+    "word": "era",
+    "synonyms": [
+      "period",
+      "epoch",
+      "age"
+    ],
+    "definition": "A long and distinct period of history with particular characteristics — davr, zamon"
+  },
+  {
+    "word": "eternal",
+    "synonyms": [
+      "lasting",
+      "everlasting",
+      "perpetual"
+    ],
+    "definition": "Lasting or existing forever without end or interruption — abadiy, mangu"
+  }
+]
