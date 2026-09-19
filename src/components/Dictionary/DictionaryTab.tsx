@@ -22,6 +22,7 @@ export const DictionaryTab: React.FC<DictionaryTabProps> = ({
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterStarred, setFilterStarred] = useState(false);
+  const [selectedStage, setSelectedStage] = useState<'all' | 'New' | 'Learning' | 'Reviewing' | 'Mastered'>('all');
   const [sortOrder, setSortOrder] = useState<'default' | 'asc' | 'desc'>('default');
   const [copied, setCopied] = useState(false);
   const [speakingWord, setSpeakingWord] = useState<string | null>(null);
@@ -45,6 +46,15 @@ export const DictionaryTab: React.FC<DictionaryTabProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  const stageStats = useMemo(() => {
+    const counts = { all: deck.data.length, New: 0, Learning: 0, Reviewing: 0, Mastered: 0 };
+    deck.data.forEach((item) => {
+      const stage = getCardStage(item);
+      counts[stage] += 1;
+    });
+    return counts;
+  }, [deck.data]);
+
   const filteredTerms = useMemo(() => {
     let list = [...deck.data];
 
@@ -64,6 +74,11 @@ export const DictionaryTab: React.FC<DictionaryTabProps> = ({
       list = list.filter((item) => item.isStarred);
     }
 
+    // Stage filter
+    if (selectedStage !== 'all') {
+      list = list.filter((item) => getCardStage(item) === selectedStage);
+    }
+
     // Sorting
     if (sortOrder === 'asc') {
       list.sort((a, b) => a.word.localeCompare(b.word));
@@ -72,7 +87,7 @@ export const DictionaryTab: React.FC<DictionaryTabProps> = ({
     }
 
     return list;
-  }, [deck.data, searchQuery, filterStarred, sortOrder]);
+  }, [deck.data, searchQuery, filterStarred, selectedStage, sortOrder]);
 
   const handleSpeak = (word: string) => {
     setSpeakingWord(word);
@@ -204,6 +219,46 @@ export const DictionaryTab: React.FC<DictionaryTabProps> = ({
             <span className="hidden sm:inline">{copied ? 'Copied' : 'Copy'}</span>
           </button>
         </div>
+      </div>
+
+      {/* SRS Mastery Stage Filter Chips */}
+      <div className="flex items-center gap-1.5 p-1 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 overflow-x-auto scrollbar-none shadow-2xs">
+        {(['all', 'New', 'Learning', 'Reviewing', 'Mastered'] as const).map((stage) => {
+          const count = stageStats[stage];
+          const isSelected = selectedStage === stage;
+
+          return (
+            <button
+              key={stage}
+              type="button"
+              onClick={() => setSelectedStage(stage)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap ${
+                isSelected
+                  ? stage === 'Mastered'
+                    ? 'bg-emerald-600 text-white shadow-xs'
+                    : stage === 'Reviewing'
+                    ? 'bg-indigo-600 text-white shadow-xs'
+                    : stage === 'Learning'
+                    ? 'bg-amber-500 text-white shadow-xs'
+                    : stage === 'New'
+                    ? 'bg-sky-600 text-white shadow-xs'
+                    : 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60'
+              }`}
+            >
+              <span>{stage === 'all' ? 'All Stages' : stage}</span>
+              <span
+                className={`px-1.5 py-0.2 rounded-full text-[10px] font-black ${
+                  isSelected
+                    ? 'bg-white/20 text-white'
+                    : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+                }`}
+              >
+                {count}
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {/* Counter bar */}

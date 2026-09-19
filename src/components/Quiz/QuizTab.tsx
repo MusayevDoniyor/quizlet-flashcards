@@ -89,8 +89,8 @@ export const QuizTab: React.FC<QuizTabProps> = ({
 
   const currentQ = questions[currentIndex];
 
-  const handleSelectOption = (idx: number) => {
-    if (isAnswerSubmitted) return;
+  const handleSelectOption = useCallback((idx: number) => {
+    if (isAnswerSubmitted || !currentQ) return;
     setSelectedOption(idx);
     setIsAnswerSubmitted(true);
 
@@ -109,9 +109,9 @@ export const QuizTab: React.FC<QuizTabProps> = ({
         },
       ]);
     }
-  };
+  }, [isAnswerSubmitted, currentQ, soundEnabled]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
       setSelectedOption(null);
@@ -137,7 +137,43 @@ export const QuizTab: React.FC<QuizTabProps> = ({
         accuracy,
       });
     }
-  };
+  }, [currentIndex, questions.length, score, soundEnabled, onShowToast, onRecordHistory, deck]);
+
+  // Retake Only Missed Questions Handler
+  const retakeMissedQuestions = useCallback(() => {
+    if (wrongAnswers.length === 0) return;
+    const missedWords = wrongAnswers.map((w) => w.correct);
+    const missedItems = deck.data.filter((item) => missedWords.includes(item.word));
+
+    const generated: QuizQuestion[] = missedItems.map((item) => {
+      const distractors = deck.data
+        .filter((d) => d.word !== item.word)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3)
+        .map((d) => d.word);
+
+      const options = [...distractors, item.word].sort(() => Math.random() - 0.5);
+      const correctIndex = options.indexOf(item.word);
+
+      return {
+        word: item.word,
+        definition: item.definition,
+        synonyms: item.synonyms || [],
+        options,
+        correctIndex,
+        selectedIndex: null,
+      };
+    });
+
+    setQuestions(generated);
+    setCurrentIndex(0);
+    setScore(0);
+    setSelectedOption(null);
+    setIsAnswerSubmitted(false);
+    setIsCompleted(false);
+    setWrongAnswers([]);
+    onShowToast(`Retaking ${missedItems.length} missed question(s)! 💪`, 'info');
+  }, [wrongAnswers, deck.data, onShowToast]);
 
   // Keyboard Shortcuts for Quiz
   useEffect(() => {
@@ -160,7 +196,7 @@ export const QuizTab: React.FC<QuizTabProps> = ({
     }
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  });
+  }, [isCompleted, currentQ, isAnswerSubmitted, handleSelectOption, handleNext]);
 
   if (!currentQ && !isCompleted) {
     return (
@@ -243,13 +279,23 @@ export const QuizTab: React.FC<QuizTabProps> = ({
 
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          {wrongAnswers.length > 0 && (
+            <button
+              type="button"
+              onClick={retakeMissedQuestions}
+              className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm bg-rose-600 hover:bg-rose-700 text-white shadow-md shadow-rose-600/25 transition-all animate-pulse"
+            >
+              <Repeat className="w-4 h-4" />
+              Retake {wrongAnswers.length} Missed Question{wrongAnswers.length === 1 ? '' : 's'}
+            </button>
+          )}
           <button
             type="button"
             onClick={generateQuiz}
             className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/20 transition-all"
           >
             <Repeat className="w-4 h-4" />
-            Retake Quiz
+            Retake Full Quiz
           </button>
           <button
             type="button"
