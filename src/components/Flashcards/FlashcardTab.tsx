@@ -284,28 +284,51 @@ export const FlashcardTab: React.FC<FlashcardTabProps> = ({
     handleStar,
   ]);
 
-  // Auto-play timer
+  // Auto-play timer with automated pronunciation
   useEffect(() => {
-    if (!isAutoPlaying || isCompleted) {
-      if (autoPlayTimerRef.current) clearInterval(autoPlayTimerRef.current);
+    if (!isAutoPlaying || isCompleted || !currentCard) {
+      if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current);
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
       return;
     }
 
-    autoPlayTimerRef.current = setInterval(() => {
-      setIsFlipped((prev) => {
-        if (!prev) {
-          return true;
-        } else {
-          handleNext();
-          return false;
-        }
-      });
-    }, 2800);
+    // Step A: Front Face -> Pronounce word and schedule flip
+    if (!isFlipped) {
+      const textToSpeak = isSwapped ? currentCard.definition : currentCard.word;
+      if (soundEnabled) {
+        speakWord(
+          textToSpeak,
+          () => setIsSpeaking(true),
+          () => setIsSpeaking(false)
+        );
+      }
+
+      autoPlayTimerRef.current = setTimeout(() => {
+        soundFx.playCardFlip(soundEnabled);
+        setIsFlipped(true);
+      }, 3200);
+    } else {
+      // Step B: Back Face -> Wait so user can read definition, then advance
+      autoPlayTimerRef.current = setTimeout(() => {
+        handleNext();
+      }, 3500);
+    }
 
     return () => {
-      if (autoPlayTimerRef.current) clearInterval(autoPlayTimerRef.current);
+      if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current);
     };
-  }, [isAutoPlaying, isCompleted, handleNext]);
+  }, [
+    isAutoPlaying,
+    isFlipped,
+    currentIndex,
+    isCompleted,
+    currentCard,
+    isSwapped,
+    soundEnabled,
+    handleNext,
+  ]);
 
   // Touch Swipe Handlers for Mobile
   const handleTouchStart = (e: React.TouchEvent) => {
