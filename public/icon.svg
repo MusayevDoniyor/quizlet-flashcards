@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="lexiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="45%" stop-color="#4338CA" />
+      <stop offset="100%" stop-color="#312E81" />
+    </linearGradient>
+
+    <!-- Top Specular Highlight -->
+    <radialGradient id="specularGlow" cx="25%" cy="20%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Front Card Gradient -->
+    <linearGradient id="frontCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+
+    <!-- Sparkle / Active Recall Symbol Gradient -->
+    <linearGradient id="recallSpark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <!-- Smooth Drop Shadow for Front Card -->
+    <filter id="softCardShadow" x="-15%" y="-10%" width="130%" height="135%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Base -->
+  <rect width="512" height="512" rx="116" fill="url(#lexiBg)" />
+  <rect width="512" height="512" rx="116" fill="url(#specularGlow)" />
+  <rect x="7" y="7" width="498" height="498" rx="110" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="4" />
+
+  <!-- Back Angled Flashcard (Translucent Glass Effect) -->
+  <g transform="translate(256 256) rotate(13) translate(-256 -256)">
+    <rect x="126" y="95" width="260" height="320" rx="36" fill="#FFFFFF" fill-opacity="0.2" stroke="#FFFFFF" stroke-opacity="0.38" stroke-width="3.5" />
+  </g>
+
+  <!-- Front Hero Flashcard -->
+  <g filter="url(#softCardShadow)">
+    <rect x="134" y="103" width="244" height="306" rx="34" fill="url(#frontCard)" stroke="#E2E8F0" stroke-width="2.5" />
+
+    <!-- Top Card Pill Badge -->
+    <rect x="168" y="136" width="65" height="11" rx="5.5" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5" />
+
+    <!-- Active Recall 4-Point Astroid Star -->
+    <path d="M256 170 C256 211 268 231 317 231 C268 231 256 251 256 292 C256 251 244 231 195 231 C244 231 256 211 256 170 Z" fill="url(#recallSpark)" />
+    <!-- Cyan Inner Spark -->
+    <path d="M256 203 C256 222 261 231 284 231 C261 231 256 240 256 259 C256 240 251 231 228 231 C251 231 256 222 256 203 Z" fill="#06B6D4" />
+
+    <!-- Gold Mini Sparkle -->
+    <path d="M330 155 C330 167 334 172 346 172 C334 172 330 177 330 189 C330 177 326 172 314 172 C326 172 330 167 330 155 Z" fill="#F59E0B" />
+
+    <!-- Lexical Card Content Lines -->
+    <rect x="169" y="325" width="174" height="13" rx="6.5" fill="#4F46E5" fill-opacity="0.24" />
+    <rect x="194" y="350" width="124" height="11" rx="5.5" fill="#94A3B8" fill-opacity="0.4" />
+  </g>
+</svg>
