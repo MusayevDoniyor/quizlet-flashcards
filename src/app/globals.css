@@ -46,6 +46,30 @@ body {
   font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* Global button and interactive element cursor rules */
+button,
+[role="button"],
+[role="tab"],
+[role="option"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+select,
+summary,
+label:has(input[type="checkbox"]),
+label:has(input[type="radio"]),
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"],
+input:disabled,
+select:disabled {
+  cursor: not-allowed;
+}
+
 /* 3D Flashcard flip */
 .card-scene {
   perspective: 1200px;
