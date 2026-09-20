@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Volume2, VolumeX, Sun, Moon, Database, Sparkles, BookOpen } from 'lucide-react';
+import { Volume2, VolumeX, Sun, Moon, Cloud, Sparkles, BookOpen } from 'lucide-react';
 import { CustomDeckDropdown } from '@/components/CustomDeckDropdown';
 import { Deck, DbStatusResponse } from '@/types';
 
@@ -43,11 +43,8 @@ export const Header: React.FC<HeaderProps> = ({
               <Sparkles className="w-5 h-5 fill-white/20" />
             </div>
             <div>
-              <h1 className="text-lg font-black tracking-tight text-slate-900 dark:text-slate-50 flex items-center gap-2">
+              <h1 className="text-lg font-black tracking-tight text-slate-900 dark:text-slate-50">
                 LexiLearn
-                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/60">
-                  Next.js + Neon
-                </span>
               </h1>
               <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400 hidden sm:block">
                 Professional Flashcard & Active Recall Platform
@@ -55,24 +52,23 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          {/* Controls: DB Status, Sound, Theme */}
+          {/* Controls: Cloud Sync, Sound, Theme */}
           <div className="flex items-center gap-2">
-            {/* Database Status Button */}
+            {/* Cloud Sync Status Button */}
             <button
               type="button"
               onClick={onOpenDbModal}
-              title={dbStatus?.message || 'Database status'}
+              title={dbStatus?.connected ? 'Cloud sync active: All progress saved' : 'Offline mode: Saved locally'}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition-colors bg-slate-50 dark:bg-slate-800/80 border-slate-200 dark:border-slate-700/80 hover:bg-slate-100 dark:hover:bg-slate-800"
             >
-              <Database className="w-3.5 h-3.5 text-indigo-500" />
-              <span className="hidden sm:inline">DB:</span>
+              <Cloud className="w-3.5 h-3.5 text-indigo-500" />
               <span
                 className={`w-2 h-2 rounded-full ${
                   dbStatus?.connected ? 'bg-emerald-500 shadow-xs shadow-emerald-500/50' : 'bg-amber-500'
                 }`}
               />
               <span className="text-[11px]">
-                {dbStatus?.connected ? 'Neon DB' : 'Local Mode'}
+                {dbStatus?.connected ? 'Cloud Synced' : 'Offline Mode'}
               </span>
             </button>
 

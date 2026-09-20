@@ -163,7 +163,7 @@ export const CustomDeckDropdown: React.FC<CustomDeckDropdownProps> = ({
                 className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl border border-dashed border-indigo-300 dark:border-indigo-700/60 text-indigo-600 dark:text-indigo-400 font-bold text-xs hover:bg-indigo-50 dark:hover:bg-indigo-950/40 transition-colors"
               >
                 <Plus className="w-3.5 h-3.5" />
-                Add New Set (JSON)
+                Add New Study Set
               </button>
             </div>
           </div>

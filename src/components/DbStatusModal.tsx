@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Database, CheckCircle2, ShieldCheck, Layers, Activity, X, Server, Clock } from 'lucide-react';
+import { Cloud, CheckCircle2, ShieldCheck, Layers, Activity, X, RefreshCw, Clock } from 'lucide-react';
 import { DbStatusResponse } from '@/types';
 
 interface DbStatusModalProps {
@@ -35,14 +35,14 @@ export const DbStatusModal: React.FC<DbStatusModalProps> = ({
         <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shadow-xs">
-              <Database className="w-5 h-5" />
+              <Cloud className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-extrabold text-lg text-slate-900 dark:text-slate-100">
-                Cloud Database Status
+                Cloud Sync & Storage
               </h3>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                Neon Serverless PostgreSQL
+                Automatic Study Progress Synchronization
               </p>
             </div>
           </div>
@@ -60,7 +60,7 @@ export const DbStatusModal: React.FC<DbStatusModalProps> = ({
           <div className="flex items-center justify-between mb-3">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center gap-1.5">
               <Activity className="w-3.5 h-3.5 text-emerald-500" />
-              Live Health
+              Sync Status
             </span>
             <span
               className={`inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full ${
@@ -70,7 +70,7 @@ export const DbStatusModal: React.FC<DbStatusModalProps> = ({
               }`}
             >
               <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'}`} />
-              {isConnected ? 'Neon Active & Connected' : 'Local Storage Fallback'}
+              {isConnected ? 'Cloud Active & Synced' : 'Offline / Local Storage'}
             </span>
           </div>
 
@@ -78,46 +78,46 @@ export const DbStatusModal: React.FC<DbStatusModalProps> = ({
             <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-bold text-slate-800 dark:text-slate-100">
-                {dbStatus?.message || 'Connected to Neon PostgreSQL (neondb)'}
+                All study progress is securely backed up
               </p>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                All study history, flashcards, spaced repetition intervals, and records are synced across sessions.
+                Your flashcard sets, spaced repetition reviews, quiz scores, and starred terms are automatically synchronized across sessions.
               </p>
             </div>
           </div>
         </div>
 
-        {/* System & Architecture Specs */}
+        {/* System Specs in user-friendly language */}
         <div className="mt-4 grid grid-cols-2 gap-2.5">
           <div className="p-3 rounded-xl border border-slate-200/70 dark:border-slate-800 bg-white dark:bg-slate-900/60">
             <div className="flex items-center gap-2 text-slate-400 text-xs font-bold mb-1">
-              <Server className="w-3.5 h-3.5 text-indigo-500" />
-              Engine & Provider
+              <RefreshCw className="w-3.5 h-3.5 text-indigo-500" />
+              Sync Mode
             </div>
             <p className="text-xs font-extrabold text-slate-800 dark:text-slate-200">
-              Neon PostgreSQL 16
+              Real-Time Backup
             </p>
-            <p className="text-[11px] text-slate-400">Serverless Architecture</p>
+            <p className="text-[11px] text-slate-400">Automatic background sync</p>
           </div>
 
           <div className="p-3 rounded-xl border border-slate-200/70 dark:border-slate-800 bg-white dark:bg-slate-900/60">
             <div className="flex items-center gap-2 text-slate-400 text-xs font-bold mb-1">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-              Security & Transport
+              Data Security
             </div>
             <p className="text-xs font-extrabold text-slate-800 dark:text-slate-200">
-              SSL / TLS Encrypted
+              Encrypted & Safe
             </p>
-            <p className="text-[11px] text-slate-400">Pooled connection</p>
+            <p className="text-[11px] text-slate-400">Protected data transport</p>
           </div>
 
           <div className="p-3 rounded-xl border border-slate-200/70 dark:border-slate-800 bg-white dark:bg-slate-900/60">
             <div className="flex items-center gap-2 text-slate-400 text-xs font-bold mb-1">
               <Layers className="w-3.5 h-3.5 text-sky-500" />
-              Synced Data Tables
+              Synchronized Data
             </div>
             <p className="text-xs font-extrabold text-slate-800 dark:text-slate-200">
-              5 Relational Tables
+              All Study Categories
             </p>
             <p className="text-[11px] text-slate-400">Cards, decks, SRS, history</p>
           </div>
@@ -125,12 +125,12 @@ export const DbStatusModal: React.FC<DbStatusModalProps> = ({
           <div className="p-3 rounded-xl border border-slate-200/70 dark:border-slate-800 bg-white dark:bg-slate-900/60">
             <div className="flex items-center gap-2 text-slate-400 text-xs font-bold mb-1">
               <Clock className="w-3.5 h-3.5 text-amber-500" />
-              Last Heartbeat
+              Last Sync
             </div>
             <p className="text-xs font-extrabold text-slate-800 dark:text-slate-200">
               {lastSyncTime}
             </p>
-            <p className="text-[11px] text-slate-400">Automatic real-time sync</p>
+            <p className="text-[11px] text-slate-400">Always up-to-date</p>
           </div>
         </div>
 
