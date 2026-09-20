@@ -957,32 +957,34 @@ export const FlashcardTab: React.FC<FlashcardTabProps> = ({
         </div>
       ) : (
         /* Bottom Standard Navigation Buttons */
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center justify-between gap-2 sm:gap-3">
           <button
             type="button"
             onClick={handlePrev}
             disabled={currentIndex === 0}
-            className="flex-1 flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl border font-bold text-sm transition-all bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/80 disabled:opacity-40 disabled:cursor-not-allowed shadow-xs"
+            className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 py-3.5 px-3 sm:px-5 rounded-2xl border font-bold text-xs sm:text-sm transition-all bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/80 disabled:opacity-40 disabled:cursor-not-allowed shadow-xs"
           >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Previous</span>
+            <ArrowLeft className="w-4 h-4 shrink-0" />
+            <span className="hidden sm:inline">Previous</span>
+            <span className="sm:hidden">Prev</span>
           </button>
 
           <button
             type="button"
             onClick={handleFlip}
-            className="px-6 py-3.5 rounded-2xl font-black text-sm bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 transition-colors shadow-xs"
+            className="px-4 sm:px-6 py-3.5 rounded-2xl font-black text-xs sm:text-sm bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 transition-colors shadow-xs whitespace-nowrap"
           >
-            Reveal Answer
+            <span className="hidden sm:inline">Reveal Answer</span>
+            <span className="sm:hidden">Reveal</span>
           </button>
 
           <button
             type="button"
             onClick={handleNext}
-            className="flex-1 flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl font-bold text-sm transition-all bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/25"
+            className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 py-3.5 px-3 sm:px-5 rounded-2xl font-bold text-xs sm:text-sm transition-all bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-600/25"
           >
             <span>{currentIndex === activeDeck.length - 1 ? 'Finish' : 'Next'}</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 shrink-0" />
           </button>
         </div>
       )}
